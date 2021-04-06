@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OsfFdHWhR6Ank1DP9lwTjcz3aLqgLQ1+2BJhMvhWeApQ5JXrAdnR7SVvp72bGmaUcyQLZh4+56z8nrVaFU2U7g==",
+  "dgSpecHash": "uVI9duvcLmOCxNcNYM0jbe1y0hUvQDzM9OQ0MEZUkHOl6mzMn/zbEIvM02ql/PT+GIwE0W4iZ86GiRFXb43yyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\MuzickaRadnjaSoftver\\MuzickaRadnja\\MuzickaRadnja\\MuzickaRadnja.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\MuzickaRadnjaSoftver\\MuzickaRadnja\\MuzickaRadnja\\MuzickaRadnja.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",
