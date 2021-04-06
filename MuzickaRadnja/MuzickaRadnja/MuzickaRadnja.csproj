@@ -6,4 +6,12 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\DatabaseScripts\" />
+    <Folder Include="Data\Model\" />
+    <Folder Include="Data\Exceptions\" />
+    <Folder Include="Data\Controller\" />
+    <Folder Include="Forms\" />
+  </ItemGroup>
+
 </Project>
