@@ -17,5 +17,42 @@ namespace MuzickaRadnja
             InitializeComponent();
         }
 
+        private void hideSubmenu()
+        {
+            if (PanelInstrumentiSubMenu.Visible == true)
+                PanelInstrumentiSubMenu.Visible = false;
+            if (PanelMaloprodajaSubMenu.Visible == true)
+                PanelMaloprodajaSubMenu.Visible = false;
+            if (PanelIznajmljivanje.Visible == true)
+                PanelIznajmljivanje.Visible = false;
+        }
+
+        private void showSubmenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubmenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;//Ciklicno...
+            }
+        }
+
+        private void btnInstrumentMenu_Click(object sender, EventArgs e)
+        {
+            showSubmenu(PanelInstrumentiSubMenu);
+        }
+
+        private void btnProdajaSideMenu_Click(object sender, EventArgs e)
+        {
+            showSubmenu(PanelMaloprodajaSubMenu);
+        }
+
+        private void btnIznajmljivanjeSideMenu_Click(object sender, EventArgs e)
+        {
+            showSubmenu(PanelIznajmljivanje);
+        }
     }
 }
