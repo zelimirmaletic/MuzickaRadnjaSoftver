@@ -10,9 +10,12 @@
     <Folder Include="Data\DatabaseScripts\" />
     <Folder Include="Data\Model\" />
     <Folder Include="Data\Exceptions\" />
-    <Folder Include="Data\Controller\" />
     <Folder Include="Forms\" />
     <Folder Include="Resources\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.23" />
   </ItemGroup>
 
   <ItemGroup>
