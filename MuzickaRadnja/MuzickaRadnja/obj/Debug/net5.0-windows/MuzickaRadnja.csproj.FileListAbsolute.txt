@@ -34,3 +34,4 @@ C:\Users\Admin\source\repos\MuzickaRadnjaSoftver\MuzickaRadnja\MuzickaRadnja\obj
 C:\Users\Admin\source\repos\MuzickaRadnjaSoftver\MuzickaRadnja\MuzickaRadnja\obj\Debug\net5.0-windows\MuzickaRadnja.Forms.DodajInstrumentForm.resources
 C:\Users\Admin\source\repos\MuzickaRadnjaSoftver\MuzickaRadnja\MuzickaRadnja\obj\Debug\net5.0-windows\MuzickaRadnja.Forms.NoviRacunForm.resources
 C:\Users\Admin\source\repos\MuzickaRadnjaSoftver\MuzickaRadnja\MuzickaRadnja\obj\Debug\net5.0-windows\MuzickaRadnja.Forms.ListaRacunaForm.resources
+C:\Users\Admin\source\repos\MuzickaRadnjaSoftver\MuzickaRadnja\MuzickaRadnja\obj\Debug\net5.0-windows\MuzickaRadnja.Forms.NoviUgovorForm.resources

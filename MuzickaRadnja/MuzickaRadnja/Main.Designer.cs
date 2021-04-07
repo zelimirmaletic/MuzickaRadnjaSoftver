@@ -176,7 +176,7 @@ namespace MuzickaRadnja
             this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(250, 35);
             this.button6.TabIndex = 5;
-            this.button6.Text = "Nova uplata";
+            this.button6.Text = "Uplata rate";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             // 
@@ -198,6 +198,7 @@ namespace MuzickaRadnja
             this.button7.Text = "Novi ugovor";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnIznajmljivanjeSideMenu
             // 
