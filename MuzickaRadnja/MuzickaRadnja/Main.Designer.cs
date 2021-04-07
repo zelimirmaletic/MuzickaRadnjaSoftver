@@ -50,6 +50,7 @@ namespace MuzickaRadnja
             this.btnSviInstrumenti = new System.Windows.Forms.Button();
             this.btnInstrumentMenu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,6 +58,7 @@ namespace MuzickaRadnja
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.ChildFormsPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.PanelIznajmljivanje.SuspendLayout();
@@ -66,6 +68,7 @@ namespace MuzickaRadnja
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideMenuPanel
@@ -265,6 +268,7 @@ namespace MuzickaRadnja
             this.btnListaRacuna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListaRacuna.UseMnemonic = false;
             this.btnListaRacuna.UseVisualStyleBackColor = false;
+            this.btnListaRacuna.Click += new System.EventHandler(this.btnListaRacuna_Click);
             // 
             // btnNoviRacun
             // 
@@ -285,6 +289,7 @@ namespace MuzickaRadnja
             this.btnNoviRacun.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNoviRacun.UseMnemonic = false;
             this.btnNoviRacun.UseVisualStyleBackColor = false;
+            this.btnNoviRacun.Click += new System.EventHandler(this.btnNoviRacun_Click);
             // 
             // btnProdajaSideMenu
             // 
@@ -337,6 +342,7 @@ namespace MuzickaRadnja
             this.btnNoviInstrument.Text = "Novi instrument";
             this.btnNoviInstrument.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNoviInstrument.UseVisualStyleBackColor = false;
+            this.btnNoviInstrument.Click += new System.EventHandler(this.btnNoviInstrument_Click);
             // 
             // btnIynamljivanjeInstrumenti
             // 
@@ -356,6 +362,7 @@ namespace MuzickaRadnja
             this.btnIynamljivanjeInstrumenti.Text = "Iznajmljivanje";
             this.btnIynamljivanjeInstrumenti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIynamljivanjeInstrumenti.UseVisualStyleBackColor = false;
+            this.btnIynamljivanjeInstrumenti.Click += new System.EventHandler(this.btnIynamljivanjeInstrumenti_Click);
             // 
             // btnProdajniInstrumenti
             // 
@@ -375,6 +382,7 @@ namespace MuzickaRadnja
             this.btnProdajniInstrumenti.Text = "Prodajni";
             this.btnProdajniInstrumenti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProdajniInstrumenti.UseVisualStyleBackColor = false;
+            this.btnProdajniInstrumenti.Click += new System.EventHandler(this.btnProdajniInstrumenti_Click);
             // 
             // btnSviInstrumenti
             // 
@@ -394,6 +402,7 @@ namespace MuzickaRadnja
             this.btnSviInstrumenti.Text = "Svi instrumenti";
             this.btnSviInstrumenti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSviInstrumenti.UseVisualStyleBackColor = false;
+            this.btnSviInstrumenti.Click += new System.EventHandler(this.btnSviInstrumenti_Click);
             // 
             // btnInstrumentMenu
             // 
@@ -416,6 +425,7 @@ namespace MuzickaRadnja
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -424,13 +434,24 @@ namespace MuzickaRadnja
             this.panel3.Size = new System.Drawing.Size(250, 68);
             this.panel3.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.label3.Location = new System.Drawing.Point(55, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Softver za poslovanje";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
-            this.label2.Location = new System.Drawing.Point(110, 3);
+            this.label2.Location = new System.Drawing.Point(110, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(96, 40);
@@ -442,7 +463,7 @@ namespace MuzickaRadnja
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.label1.Location = new System.Drawing.Point(58, 3);
+            this.label1.Location = new System.Drawing.Point(58, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 40);
             this.label1.TabIndex = 1;
@@ -489,22 +510,30 @@ namespace MuzickaRadnja
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.panel6.Controls.Add(this.ChildFormsPanel);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(255, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(5, 746);
             this.panel6.TabIndex = 2;
             // 
+            // ChildFormsPanel
+            // 
+            this.ChildFormsPanel.Location = new System.Drawing.Point(0, 0);
+            this.ChildFormsPanel.Name = "ChildFormsPanel";
+            this.ChildFormsPanel.Size = new System.Drawing.Size(5, 746);
+            this.ChildFormsPanel.TabIndex = 3;
+            // 
             // lblNaslov
             // 
             this.lblNaslov.AutoSize = true;
-            this.lblNaslov.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNaslov.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.lblNaslov.Location = new System.Drawing.Point(266, 9);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(169, 47);
+            this.lblNaslov.Size = new System.Drawing.Size(148, 45);
             this.lblNaslov.TabIndex = 3;
-            this.lblNaslov.Text = "Statistika ";
+            this.lblNaslov.Text = "Statistika";
             // 
             // Main
             // 
@@ -519,7 +548,9 @@ namespace MuzickaRadnja
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProKofiev";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.SideMenuPanel.ResumeLayout(false);
             this.PanelIznajmljivanje.ResumeLayout(false);
             this.PanelMaloprodajaSubMenu.ResumeLayout(false);
@@ -529,6 +560,7 @@ namespace MuzickaRadnja
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,7 +595,9 @@ namespace MuzickaRadnja
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnIznajmljivanjeSideMenu;
         private System.Windows.Forms.Button btnORadnji;
+        private System.Windows.Forms.Panel ChildFormsPanel;
         private System.Windows.Forms.Label lblNaslov;
+        private System.Windows.Forms.Label label3;
     }
 }
 

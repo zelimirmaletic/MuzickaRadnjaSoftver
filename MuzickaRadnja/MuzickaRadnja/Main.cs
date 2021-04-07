@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuzickaRadnja.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -53,6 +54,42 @@ namespace MuzickaRadnja
         private void btnIznajmljivanjeSideMenu_Click(object sender, EventArgs e)
         {
             showSubmenu(PanelIznajmljivanje);
+        }
+
+        private void btnSviInstrumenti_Click(object sender, EventArgs e)
+        {
+            Form form = new SviInstrumentiForm();
+            form.ShowDialog();
+        }
+
+        private void btnProdajniInstrumenti_Click(object sender, EventArgs e)
+        {
+            Form form = new ListaMaloprodajnihInstrumenata();
+            form.ShowDialog();
+        }
+
+        private void btnIynamljivanjeInstrumenti_Click(object sender, EventArgs e)
+        {
+            Form form = new ListaInstrumenataZaIzdavanjeForm();
+            form.ShowDialog();
+        }
+
+        private void btnNoviInstrument_Click(object sender, EventArgs e)
+        {
+            Form form = new DodajInstrumentForm();
+            form.ShowDialog();
+        }
+
+        private void btnNoviRacun_Click(object sender, EventArgs e)
+        {
+            Form form = new NoviRacunForm();
+            form.ShowDialog();
+        }
+
+        private void btnListaRacuna_Click(object sender, EventArgs e)
+        {
+            Form form = new ListaRacunaForm();
+            form.ShowDialog();
         }
     }
 }
