@@ -97,5 +97,11 @@ namespace MuzickaRadnja
             Form form = new NoviUgovorForm();
             form.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form form = new NovaUplataForm();
+            form.ShowDialog();
+        }
     }
 }

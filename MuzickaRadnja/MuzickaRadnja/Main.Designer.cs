@@ -179,6 +179,7 @@ namespace MuzickaRadnja
             this.button6.Text = "Uplata rate";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 

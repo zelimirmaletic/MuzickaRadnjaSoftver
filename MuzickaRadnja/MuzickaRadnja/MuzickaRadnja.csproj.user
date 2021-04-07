@@ -13,6 +13,9 @@
     <Compile Update="Forms\ListaRacunaForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\NovaUplataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\NoviRacunForm.cs">
       <SubType>Form</SubType>
     </Compile>
