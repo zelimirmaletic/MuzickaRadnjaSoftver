@@ -1,4 +1,5 @@
-﻿using MuzickaRadnja.Forms;
+﻿using MuzickaRadnja.Data.Controller;
+using MuzickaRadnja.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,20 @@ namespace MuzickaRadnja
         public Main()
         {
             InitializeComponent();
+            loadStatistika();
+        }
+
+        private void loadStatistika()
+        {
+            string statistika = StatistikaController.GetStatistika();
+            var listaPodataka = statistika.Split('|');
+            lblIznajmljivanje.Text = listaPodataka[0];
+            lblProdajnih.Text = listaPodataka[1];
+            lblUkupnoInstrumenata.Text = (Double.Parse(listaPodataka[0]) + double.Parse(listaPodataka[1])).ToString();
+            lblRacuna.Text = listaPodataka[2];
+            lblUgovora.Text = listaPodataka[3];
+            lblPromet.Text = listaPodataka[4];
+            lblKlijenata.Text = listaPodataka[5];
         }
 
         private void hideSubmenu()

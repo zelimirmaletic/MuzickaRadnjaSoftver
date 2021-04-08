@@ -161,5 +161,36 @@ namespace MuzickaRadnja.Data.Controller
             }
             return result;
         }
+        public static string nextId()
+        {
+            MySqlConnection connection = null;
+            MySqlCommand cmd = null;
+            MySqlDataReader reader = null;
+            String id = "";
+
+            try
+            {
+                connection = MySqlUtil.GetConnection();
+                String query = "select max(Id) as ID from Instrument;";
+                cmd = connection.CreateCommand();
+                cmd.CommandText = query;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    id = (reader.IsDBNull(0) ? 1 : (reader.GetInt32("ID") + 1)).ToString();
+
+            }
+            catch (MySqlException e)
+            {
+
+            }
+            finally
+            {
+                MySqlUtil.CloseQuietly(connection);
+                MySqlUtil.CloseQuietly(reader);
+            }
+
+            return id;
+        }
+
     }
 }

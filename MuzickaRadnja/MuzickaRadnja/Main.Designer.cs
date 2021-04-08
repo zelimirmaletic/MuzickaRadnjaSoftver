@@ -64,7 +64,7 @@ namespace MuzickaRadnja
             this.lblProdajnih = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.lblPotrosnih = new System.Windows.Forms.Label();
+            this.lblIznajmljivanje = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblUkupnoInstrumenata = new System.Windows.Forms.Label();
@@ -612,24 +612,24 @@ namespace MuzickaRadnja
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
-            this.panel7.Controls.Add(this.lblPotrosnih);
+            this.panel7.Controls.Add(this.lblIznajmljivanje);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(266, 112);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(806, 40);
             this.panel7.TabIndex = 5;
             // 
-            // lblPotrosnih
+            // lblIznajmljivanje
             // 
-            this.lblPotrosnih.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPotrosnih.AutoSize = true;
-            this.lblPotrosnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPotrosnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblPotrosnih.Location = new System.Drawing.Point(712, 5);
-            this.lblPotrosnih.Name = "lblPotrosnih";
-            this.lblPotrosnih.Size = new System.Drawing.Size(27, 32);
-            this.lblPotrosnih.TabIndex = 5;
-            this.lblPotrosnih.Text = "0";
+            this.lblIznajmljivanje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblIznajmljivanje.AutoSize = true;
+            this.lblIznajmljivanje.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIznajmljivanje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblIznajmljivanje.Location = new System.Drawing.Point(712, 5);
+            this.lblIznajmljivanje.Name = "lblIznajmljivanje";
+            this.lblIznajmljivanje.Size = new System.Drawing.Size(27, 32);
+            this.lblIznajmljivanje.TabIndex = 5;
+            this.lblIznajmljivanje.Text = "0";
             // 
             // label5
             // 
@@ -788,9 +788,9 @@ namespace MuzickaRadnja
             this.label9.Location = new System.Drawing.Point(0, 5);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(91, 32);
+            this.label9.Size = new System.Drawing.Size(231, 32);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Promet";
+            this.label9.Text = "Promet maloprodaja";
             // 
             // panel12
             // 
@@ -941,7 +941,7 @@ namespace MuzickaRadnja
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblProdajnih;
-        private System.Windows.Forms.Label lblPotrosnih;
+        private System.Windows.Forms.Label lblIznajmljivanje;
         private System.Windows.Forms.Label lblUkupnoInstrumenata;
         private System.Windows.Forms.Label lblRacuna;
         private System.Windows.Forms.Label lblUgovora;

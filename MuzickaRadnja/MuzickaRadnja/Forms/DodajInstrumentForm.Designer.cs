@@ -41,8 +41,6 @@ namespace MuzickaRadnja.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.tbSifra = new System.Windows.Forms.TextBox();
             this.tbNaziv = new System.Windows.Forms.TextBox();
-            this.tbVrsta = new System.Windows.Forms.TextBox();
-            this.tbGodProizvodnje = new System.Windows.Forms.TextBox();
             this.tbNabavnaCijena = new System.Windows.Forms.TextBox();
             this.cbPromet = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,6 +49,8 @@ namespace MuzickaRadnja.Forms
             this.tbKolicina = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cbVrsta = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.NaslovPanel.SuspendLayout();
             this.SuspendLayout();
@@ -130,9 +130,9 @@ namespace MuzickaRadnja.Forms
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label4.Location = new System.Drawing.Point(12, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 21);
+            this.label4.Size = new System.Drawing.Size(143, 21);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Godina proizvodnje";
+            this.label4.Text = "Datum proizvodnje";
             // 
             // label5
             // 
@@ -171,20 +171,6 @@ namespace MuzickaRadnja.Forms
             this.tbNaziv.Size = new System.Drawing.Size(359, 23);
             this.tbNaziv.TabIndex = 14;
             // 
-            // tbVrsta
-            // 
-            this.tbVrsta.Location = new System.Drawing.Point(63, 149);
-            this.tbVrsta.Name = "tbVrsta";
-            this.tbVrsta.Size = new System.Drawing.Size(359, 23);
-            this.tbVrsta.TabIndex = 15;
-            // 
-            // tbGodProizvodnje
-            // 
-            this.tbGodProizvodnje.Location = new System.Drawing.Point(164, 184);
-            this.tbGodProizvodnje.Name = "tbGodProizvodnje";
-            this.tbGodProizvodnje.Size = new System.Drawing.Size(258, 23);
-            this.tbGodProizvodnje.TabIndex = 16;
-            // 
             // tbNabavnaCijena
             // 
             this.tbNabavnaCijena.Location = new System.Drawing.Point(164, 223);
@@ -203,6 +189,7 @@ namespace MuzickaRadnja.Forms
             this.cbPromet.Name = "cbPromet";
             this.cbPromet.Size = new System.Drawing.Size(141, 23);
             this.cbPromet.TabIndex = 18;
+            this.cbPromet.SelectedIndexChanged += new System.EventHandler(this.cbPromet_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -254,6 +241,7 @@ namespace MuzickaRadnja.Forms
             this.button1.TabIndex = 23;
             this.button1.Text = "Sačuvaj";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -271,11 +259,34 @@ namespace MuzickaRadnja.Forms
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 183);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(258, 23);
+            this.dateTimePicker1.TabIndex = 25;
+            // 
+            // cbVrsta
+            // 
+            this.cbVrsta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVrsta.FormattingEnabled = true;
+            this.cbVrsta.Items.AddRange(new object[] {
+            "žičani",
+            "kombinovani",
+            "udaraljke",
+            "duvački"});
+            this.cbVrsta.Location = new System.Drawing.Point(164, 145);
+            this.cbVrsta.Name = "cbVrsta";
+            this.cbVrsta.Size = new System.Drawing.Size(141, 23);
+            this.cbVrsta.TabIndex = 26;
+            // 
             // DodajInstrumentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 432);
+            this.Controls.Add(this.cbVrsta);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbKolicina);
@@ -284,8 +295,6 @@ namespace MuzickaRadnja.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbPromet);
             this.Controls.Add(this.tbNabavnaCijena);
-            this.Controls.Add(this.tbGodProizvodnje);
-            this.Controls.Add(this.tbVrsta);
             this.Controls.Add(this.tbNaziv);
             this.Controls.Add(this.tbSifra);
             this.Controls.Add(this.label6);
@@ -322,8 +331,6 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSifra;
         private System.Windows.Forms.TextBox tbNaziv;
-        private System.Windows.Forms.TextBox tbVrsta;
-        private System.Windows.Forms.TextBox tbGodProizvodnje;
         private System.Windows.Forms.TextBox tbNabavnaCijena;
         private System.Windows.Forms.ComboBox cbPromet;
         private System.Windows.Forms.Label label7;
@@ -332,5 +339,7 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.TextBox tbKolicina;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cbVrsta;
     }
 }
