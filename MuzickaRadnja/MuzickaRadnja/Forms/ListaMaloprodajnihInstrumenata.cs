@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MuzickaRadnja.Data.Controller;
+using MuzickaRadnja.Data.DataAccess;
+using MuzickaRadnja.Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,29 @@ namespace MuzickaRadnja.Forms
         public ListaMaloprodajnihInstrumenata()
         {
             InitializeComponent();
+            loadDataGrid();
         }
+
+        private void loadDataGrid()
+        {
+
+            List<InstrumentProdaja> list = InstrumentProdajaController.ReadAll();
+
+            foreach (var obj in list)
+            {
+                
+                DataGridViewRow drvr = (DataGridViewRow)dgvTabela.Rows[0].Clone();
+                drvr.Cells[0].Value = obj.Id.ToString();
+                drvr.Cells[1].Value = obj.Naziv;
+                drvr.Cells[2].Value = obj.Vrsta;
+                drvr.Cells[3].Value = obj.GodinaProizvodnje.ToString();
+                drvr.Cells[4].Value = obj.NabavnaCijena.ToString();
+                drvr.Cells[5].Value = obj.MaloprodajnaCijena.ToString();
+                drvr.Cells[6].Value = obj.DostupnaKolicina.ToString();
+                dgvTabela.Rows.Add(drvr);
+            }
+
+        }
+
     }
 }

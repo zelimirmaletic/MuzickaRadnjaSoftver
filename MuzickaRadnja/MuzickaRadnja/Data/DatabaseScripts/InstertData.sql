@@ -37,25 +37,25 @@ insert into Administrator (Id, KorisnickoIme, Lozinka, PoslednjePrijavljivanje)
 
 -- Instrument
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Violina Strad Student', 'žičani', '2005', 3500.00);
+    values ('Violina Strad Student', 'žičani', '2011-12-18 13:17:17', 3500.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Violina Strad Pro', 'žičani', '2015', 7000.00);
+    values ('Violina Strad Pro', 'žičani', '2011-12-18 13:17:17', 7000.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Violina Strad Virtuoso', 'žičani', '2014', 20000.00);
+    values ('Violina Strad Virtuoso', 'žičani', '2011-12-18 13:17:17', 20000.00);
 
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Stanway and Sons Grand Piano', 'kombinovani', '2005', 120000.00);
+    values ('Stanway and Sons Grand Piano', 'kombinovani', '2011-12-18 13:17:17', 120000.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Yamaha Concert Piano', 'kombinovani', '2000', 50000.00);
+    values ('Yamaha Concert Piano', 'kombinovani', '2011-12-18 13:17:17', 50000.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Fazoli Grand Piano', 'kombinovani', '2018', 95000.00);
+    values ('Fazoli Grand Piano', 'kombinovani', '2011-12-18 13:17:17', 95000.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Yamaha klavinova', 'kombinovani', '2010', 2000.00);
+    values ('Yamaha klavinova', 'kombinovani', '2011-12-18 13:17:17', 2000.00);
 
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Klarinet Gemax', 'duvački', '2005', 2000.00);
+    values ('Klarinet Gemax', 'duvački', '2011-12-18 13:17:17', 2000.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Timpan Percus', 'udaraljke', '2005', 1500.00);
+    values ('Timpan Percus', 'udaraljke', '2011-12-18 13:17:17', 1500.00);
 
 -- Instrument Prodaja
 insert into InstrumentProdaja (Id, MaloprodajnaCijena, DostupnaKolicina, UkupnaNabavnaKolicina)

@@ -38,7 +38,7 @@ create table Instrument(
     Id int(6) unsigned zerofill auto_increment,
     Naziv varchar(45) not null ,
     Vrsta varchar(25) not null ,
-    GodinaProizvodnje year,
+    GodinaProizvodnje datetime,
     NabavnaCijena double not null ,
     -- KEYS
     primary key (Id)

@@ -61,26 +61,26 @@ namespace MuzickaRadnja
             this.ChildFormsPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblProdajnih = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lblPotrosnih = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lblUkupnoInstrumenata = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.lblRacuna = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lblUgovora = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.lblPromet = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblProdajnih = new System.Windows.Forms.Label();
-            this.lblPotrosnih = new System.Windows.Forms.Label();
-            this.lblUkupnoInstrumenata = new System.Windows.Forms.Label();
-            this.lblRacuna = new System.Windows.Forms.Label();
-            this.lblUgovora = new System.Windows.Forms.Label();
-            this.lblPromet = new System.Windows.Forms.Label();
             this.lblKlijenata = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.PanelIznajmljivanje.SuspendLayout();
@@ -582,6 +582,18 @@ namespace MuzickaRadnja
             this.panel1.Size = new System.Drawing.Size(806, 40);
             this.panel1.TabIndex = 4;
             // 
+            // lblProdajnih
+            // 
+            this.lblProdajnih.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblProdajnih.AutoSize = true;
+            this.lblProdajnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProdajnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblProdajnih.Location = new System.Drawing.Point(712, 5);
+            this.lblProdajnih.Name = "lblProdajnih";
+            this.lblProdajnih.Size = new System.Drawing.Size(27, 32);
+            this.lblProdajnih.TabIndex = 4;
+            this.lblProdajnih.Text = "0";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -606,6 +618,18 @@ namespace MuzickaRadnja
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(806, 40);
             this.panel7.TabIndex = 5;
+            // 
+            // lblPotrosnih
+            // 
+            this.lblPotrosnih.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPotrosnih.AutoSize = true;
+            this.lblPotrosnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPotrosnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblPotrosnih.Location = new System.Drawing.Point(712, 5);
+            this.lblPotrosnih.Name = "lblPotrosnih";
+            this.lblPotrosnih.Size = new System.Drawing.Size(27, 32);
+            this.lblPotrosnih.TabIndex = 5;
+            this.lblPotrosnih.Text = "0";
             // 
             // label5
             // 
@@ -632,6 +656,18 @@ namespace MuzickaRadnja
             this.panel8.Size = new System.Drawing.Size(806, 40);
             this.panel8.TabIndex = 5;
             // 
+            // lblUkupnoInstrumenata
+            // 
+            this.lblUkupnoInstrumenata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUkupnoInstrumenata.AutoSize = true;
+            this.lblUkupnoInstrumenata.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUkupnoInstrumenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblUkupnoInstrumenata.Location = new System.Drawing.Point(712, 8);
+            this.lblUkupnoInstrumenata.Name = "lblUkupnoInstrumenata";
+            this.lblUkupnoInstrumenata.Size = new System.Drawing.Size(27, 32);
+            this.lblUkupnoInstrumenata.TabIndex = 6;
+            this.lblUkupnoInstrumenata.Text = "0";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -656,6 +692,18 @@ namespace MuzickaRadnja
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(806, 40);
             this.panel9.TabIndex = 6;
+            // 
+            // lblRacuna
+            // 
+            this.lblRacuna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRacuna.AutoSize = true;
+            this.lblRacuna.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRacuna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblRacuna.Location = new System.Drawing.Point(712, 8);
+            this.lblRacuna.Name = "lblRacuna";
+            this.lblRacuna.Size = new System.Drawing.Size(27, 32);
+            this.lblRacuna.TabIndex = 7;
+            this.lblRacuna.Text = "0";
             // 
             // label7
             // 
@@ -682,6 +730,18 @@ namespace MuzickaRadnja
             this.panel10.Size = new System.Drawing.Size(806, 40);
             this.panel10.TabIndex = 6;
             // 
+            // lblUgovora
+            // 
+            this.lblUgovora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUgovora.AutoSize = true;
+            this.lblUgovora.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUgovora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblUgovora.Location = new System.Drawing.Point(712, 5);
+            this.lblUgovora.Name = "lblUgovora";
+            this.lblUgovora.Size = new System.Drawing.Size(27, 32);
+            this.lblUgovora.TabIndex = 8;
+            this.lblUgovora.Text = "0";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -706,6 +766,18 @@ namespace MuzickaRadnja
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(806, 40);
             this.panel11.TabIndex = 7;
+            // 
+            // lblPromet
+            // 
+            this.lblPromet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPromet.AutoSize = true;
+            this.lblPromet.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPromet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblPromet.Location = new System.Drawing.Point(712, 5);
+            this.lblPromet.Name = "lblPromet";
+            this.lblPromet.Size = new System.Drawing.Size(27, 32);
+            this.lblPromet.TabIndex = 9;
+            this.lblPromet.Text = "0";
             // 
             // label9
             // 
@@ -732,6 +804,18 @@ namespace MuzickaRadnja
             this.panel12.Size = new System.Drawing.Size(806, 40);
             this.panel12.TabIndex = 5;
             // 
+            // lblKlijenata
+            // 
+            this.lblKlijenata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblKlijenata.AutoSize = true;
+            this.lblKlijenata.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblKlijenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblKlijenata.Location = new System.Drawing.Point(712, 8);
+            this.lblKlijenata.Name = "lblKlijenata";
+            this.lblKlijenata.Size = new System.Drawing.Size(27, 32);
+            this.lblKlijenata.TabIndex = 10;
+            this.lblKlijenata.Text = "0";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -745,85 +829,9 @@ namespace MuzickaRadnja
             this.label10.TabIndex = 9;
             this.label10.Text = "Ukupno klijenata";
             // 
-            // lblProdajnih
-            // 
-            this.lblProdajnih.AutoSize = true;
-            this.lblProdajnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProdajnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblProdajnih.Location = new System.Drawing.Point(712, 5);
-            this.lblProdajnih.Name = "lblProdajnih";
-            this.lblProdajnih.Size = new System.Drawing.Size(27, 32);
-            this.lblProdajnih.TabIndex = 4;
-            this.lblProdajnih.Text = "0";
-            // 
-            // lblPotrosnih
-            // 
-            this.lblPotrosnih.AutoSize = true;
-            this.lblPotrosnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPotrosnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblPotrosnih.Location = new System.Drawing.Point(712, 5);
-            this.lblPotrosnih.Name = "lblPotrosnih";
-            this.lblPotrosnih.Size = new System.Drawing.Size(27, 32);
-            this.lblPotrosnih.TabIndex = 5;
-            this.lblPotrosnih.Text = "0";
-            // 
-            // lblUkupnoInstrumenata
-            // 
-            this.lblUkupnoInstrumenata.AutoSize = true;
-            this.lblUkupnoInstrumenata.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUkupnoInstrumenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblUkupnoInstrumenata.Location = new System.Drawing.Point(712, 8);
-            this.lblUkupnoInstrumenata.Name = "lblUkupnoInstrumenata";
-            this.lblUkupnoInstrumenata.Size = new System.Drawing.Size(27, 32);
-            this.lblUkupnoInstrumenata.TabIndex = 6;
-            this.lblUkupnoInstrumenata.Text = "0";
-            // 
-            // lblRacuna
-            // 
-            this.lblRacuna.AutoSize = true;
-            this.lblRacuna.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRacuna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblRacuna.Location = new System.Drawing.Point(712, 8);
-            this.lblRacuna.Name = "lblRacuna";
-            this.lblRacuna.Size = new System.Drawing.Size(27, 32);
-            this.lblRacuna.TabIndex = 7;
-            this.lblRacuna.Text = "0";
-            // 
-            // lblUgovora
-            // 
-            this.lblUgovora.AutoSize = true;
-            this.lblUgovora.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblUgovora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblUgovora.Location = new System.Drawing.Point(712, 5);
-            this.lblUgovora.Name = "lblUgovora";
-            this.lblUgovora.Size = new System.Drawing.Size(27, 32);
-            this.lblUgovora.TabIndex = 8;
-            this.lblUgovora.Text = "0";
-            // 
-            // lblPromet
-            // 
-            this.lblPromet.AutoSize = true;
-            this.lblPromet.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPromet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblPromet.Location = new System.Drawing.Point(712, 5);
-            this.lblPromet.Name = "lblPromet";
-            this.lblPromet.Size = new System.Drawing.Size(27, 32);
-            this.lblPromet.TabIndex = 9;
-            this.lblPromet.Text = "0";
-            // 
-            // lblKlijenata
-            // 
-            this.lblKlijenata.AutoSize = true;
-            this.lblKlijenata.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKlijenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblKlijenata.Location = new System.Drawing.Point(712, 8);
-            this.lblKlijenata.Name = "lblKlijenata";
-            this.lblKlijenata.Size = new System.Drawing.Size(27, 32);
-            this.lblKlijenata.TabIndex = 10;
-            this.lblKlijenata.Text = "0";
-            // 
             // lblDatum
             // 
+            this.lblDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDatum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));

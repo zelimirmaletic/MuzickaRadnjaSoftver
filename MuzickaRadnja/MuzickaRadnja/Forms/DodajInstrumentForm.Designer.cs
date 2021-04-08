@@ -295,6 +295,7 @@ namespace MuzickaRadnja.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NaslovPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DodajInstrumentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

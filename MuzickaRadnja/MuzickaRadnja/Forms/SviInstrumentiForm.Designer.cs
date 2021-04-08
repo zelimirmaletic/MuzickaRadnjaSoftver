@@ -30,11 +30,11 @@ namespace MuzickaRadnja.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SviInstrumentiForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NaslovPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTabela = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@ namespace MuzickaRadnja.Forms
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NaslovPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).BeginInit();
             this.SuspendLayout();
             // 
             // NaslovPanel
@@ -80,24 +80,24 @@ namespace MuzickaRadnja.Forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgvTabela
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTabela.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1088, 696);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvTabela.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTabela.Location = new System.Drawing.Point(0, 50);
+            this.dgvTabela.Name = "dgvTabela";
+            this.dgvTabela.RowTemplate.Height = 25;
+            this.dgvTabela.Size = new System.Drawing.Size(1088, 696);
+            this.dgvTabela.TabIndex = 1;
             // 
             // Column1
             // 
@@ -139,7 +139,7 @@ namespace MuzickaRadnja.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 746);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTabela);
             this.Controls.Add(this.NaslovPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -150,7 +150,7 @@ namespace MuzickaRadnja.Forms
             this.NaslovPanel.ResumeLayout(false);
             this.NaslovPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,7 +160,7 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.Panel NaslovPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNaslov;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTabela;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

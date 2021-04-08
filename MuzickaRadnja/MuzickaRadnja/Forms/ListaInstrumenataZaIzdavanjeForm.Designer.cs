@@ -29,13 +29,16 @@ namespace MuzickaRadnja.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaInstrumenataZaIzdavanjeForm));
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTabela = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cij = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NaslovPanel = new System.Windows.Forms.Panel();
@@ -44,33 +47,26 @@ namespace MuzickaRadnja.Forms
             this.NaslovPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Column5
+            // dgvTabela
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Nabavna cijena";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Godina proizvodnje";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Vrsta";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Naziv";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvTabela.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTabela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Cij,
+            this.Column6});
+            this.dgvTabela.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTabela.Location = new System.Drawing.Point(0, 50);
+            this.dgvTabela.Name = "dgvTabela";
+            this.dgvTabela.RowTemplate.Height = 25;
+            this.dgvTabela.Size = new System.Drawing.Size(1092, 700);
+            this.dgvTabela.TabIndex = 6;
             // 
             // Column1
             // 
@@ -79,22 +75,47 @@ namespace MuzickaRadnja.Forms
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // dgvTabela
+            // Column2
             // 
-            this.dgvTabela.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTabela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dgvTabela.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTabela.Location = new System.Drawing.Point(0, 50);
-            this.dgvTabela.Name = "dgvTabela";
-            this.dgvTabela.RowTemplate.Height = 25;
-            this.dgvTabela.Size = new System.Drawing.Size(1092, 700);
-            this.dgvTabela.TabIndex = 6;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Naziv";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Vrsta";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Godina proizvodnje";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "Nabavna cijena";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Cij
+            // 
+            this.Cij.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cij.HeaderText = "Cijena iznajmljivanja";
+            this.Cij.Name = "Cij";
+            this.Cij.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "Dostupna količina";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // lblNaslov
             // 
@@ -152,14 +173,16 @@ namespace MuzickaRadnja.Forms
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridView dgvTabela;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel NaslovPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cij;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
