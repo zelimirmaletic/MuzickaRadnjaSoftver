@@ -60,6 +60,28 @@ namespace MuzickaRadnja
             this.panel6 = new System.Windows.Forms.Panel();
             this.ChildFormsPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblProdajnih = new System.Windows.Forms.Label();
+            this.lblPotrosnih = new System.Windows.Forms.Label();
+            this.lblUkupnoInstrumenata = new System.Windows.Forms.Label();
+            this.lblRacuna = new System.Windows.Forms.Label();
+            this.lblUgovora = new System.Windows.Forms.Label();
+            this.lblPromet = new System.Windows.Forms.Label();
+            this.lblKlijenata = new System.Windows.Forms.Label();
+            this.lblDatum = new System.Windows.Forms.Label();
             this.SideMenuPanel.SuspendLayout();
             this.PanelIznajmljivanje.SuspendLayout();
             this.PanelMaloprodajaSubMenu.SuspendLayout();
@@ -69,6 +91,13 @@ namespace MuzickaRadnja
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideMenuPanel
@@ -108,6 +137,7 @@ namespace MuzickaRadnja
             this.btnORadnji.Text = "Podaci o radnji";
             this.btnORadnji.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnORadnji.UseVisualStyleBackColor = true;
+            this.btnORadnji.Click += new System.EventHandler(this.btnORadnji_Click);
             // 
             // PanelIznajmljivanje
             // 
@@ -141,6 +171,7 @@ namespace MuzickaRadnja
             this.button4.Text = "Lista ugovora";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -160,6 +191,7 @@ namespace MuzickaRadnja
             this.button5.Text = "Razduživanje";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -237,6 +269,7 @@ namespace MuzickaRadnja
             this.button2.Text = "Odjavi se";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PanelMaloprodajaSubMenu
             // 
@@ -537,12 +570,283 @@ namespace MuzickaRadnja
             this.lblNaslov.TabIndex = 3;
             this.lblNaslov.Text = "Statistika";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.panel1.Controls.Add(this.lblProdajnih);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(266, 72);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(806, 40);
+            this.panel1.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label4.Location = new System.Drawing.Point(0, 5);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(262, 32);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Prodajnih instrumenata";
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
+            this.panel7.Controls.Add(this.lblPotrosnih);
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Location = new System.Drawing.Point(266, 112);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(806, 40);
+            this.panel7.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label5.Location = new System.Drawing.Point(0, 5);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(336, 32);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Instrumenata za iznajmljivanje";
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.panel8.Controls.Add(this.lblUkupnoInstrumenata);
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Location = new System.Drawing.Point(266, 152);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(806, 40);
+            this.panel8.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label6.Location = new System.Drawing.Point(0, 3);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(245, 32);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Ukupno instrumenata";
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
+            this.panel9.Controls.Add(this.lblRacuna);
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Location = new System.Drawing.Point(266, 192);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(806, 40);
+            this.panel9.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label7.Location = new System.Drawing.Point(0, 8);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(338, 32);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Ukupno maloprodajnih računa";
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.panel10.Controls.Add(this.lblUgovora);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Location = new System.Drawing.Point(266, 232);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(806, 40);
+            this.panel10.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label8.Location = new System.Drawing.Point(0, 5);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(193, 32);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Ukupno ugovora";
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
+            this.panel11.Controls.Add(this.lblPromet);
+            this.panel11.Controls.Add(this.label9);
+            this.panel11.Location = new System.Drawing.Point(266, 272);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(806, 40);
+            this.panel11.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label9.Location = new System.Drawing.Point(0, 5);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label9.Size = new System.Drawing.Size(91, 32);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Promet";
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.panel12.Controls.Add(this.lblKlijenata);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Location = new System.Drawing.Point(266, 312);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(806, 40);
+            this.panel12.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.label10.Location = new System.Drawing.Point(0, 3);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label10.Size = new System.Drawing.Size(194, 32);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Ukupno klijenata";
+            // 
+            // lblProdajnih
+            // 
+            this.lblProdajnih.AutoSize = true;
+            this.lblProdajnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProdajnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblProdajnih.Location = new System.Drawing.Point(712, 5);
+            this.lblProdajnih.Name = "lblProdajnih";
+            this.lblProdajnih.Size = new System.Drawing.Size(27, 32);
+            this.lblProdajnih.TabIndex = 4;
+            this.lblProdajnih.Text = "0";
+            // 
+            // lblPotrosnih
+            // 
+            this.lblPotrosnih.AutoSize = true;
+            this.lblPotrosnih.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPotrosnih.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblPotrosnih.Location = new System.Drawing.Point(712, 5);
+            this.lblPotrosnih.Name = "lblPotrosnih";
+            this.lblPotrosnih.Size = new System.Drawing.Size(27, 32);
+            this.lblPotrosnih.TabIndex = 5;
+            this.lblPotrosnih.Text = "0";
+            // 
+            // lblUkupnoInstrumenata
+            // 
+            this.lblUkupnoInstrumenata.AutoSize = true;
+            this.lblUkupnoInstrumenata.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUkupnoInstrumenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblUkupnoInstrumenata.Location = new System.Drawing.Point(712, 8);
+            this.lblUkupnoInstrumenata.Name = "lblUkupnoInstrumenata";
+            this.lblUkupnoInstrumenata.Size = new System.Drawing.Size(27, 32);
+            this.lblUkupnoInstrumenata.TabIndex = 6;
+            this.lblUkupnoInstrumenata.Text = "0";
+            // 
+            // lblRacuna
+            // 
+            this.lblRacuna.AutoSize = true;
+            this.lblRacuna.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRacuna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblRacuna.Location = new System.Drawing.Point(712, 8);
+            this.lblRacuna.Name = "lblRacuna";
+            this.lblRacuna.Size = new System.Drawing.Size(27, 32);
+            this.lblRacuna.TabIndex = 7;
+            this.lblRacuna.Text = "0";
+            // 
+            // lblUgovora
+            // 
+            this.lblUgovora.AutoSize = true;
+            this.lblUgovora.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUgovora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblUgovora.Location = new System.Drawing.Point(712, 5);
+            this.lblUgovora.Name = "lblUgovora";
+            this.lblUgovora.Size = new System.Drawing.Size(27, 32);
+            this.lblUgovora.TabIndex = 8;
+            this.lblUgovora.Text = "0";
+            // 
+            // lblPromet
+            // 
+            this.lblPromet.AutoSize = true;
+            this.lblPromet.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPromet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblPromet.Location = new System.Drawing.Point(712, 5);
+            this.lblPromet.Name = "lblPromet";
+            this.lblPromet.Size = new System.Drawing.Size(27, 32);
+            this.lblPromet.TabIndex = 9;
+            this.lblPromet.Text = "0";
+            // 
+            // lblKlijenata
+            // 
+            this.lblKlijenata.AutoSize = true;
+            this.lblKlijenata.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblKlijenata.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblKlijenata.Location = new System.Drawing.Point(712, 8);
+            this.lblKlijenata.Name = "lblKlijenata";
+            this.lblKlijenata.Size = new System.Drawing.Size(27, 32);
+            this.lblKlijenata.TabIndex = 10;
+            this.lblKlijenata.Text = "0";
+            // 
+            // lblDatum
+            // 
+            this.lblDatum.AutoSize = true;
+            this.lblDatum.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDatum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.lblDatum.Location = new System.Drawing.Point(936, 19);
+            this.lblDatum.Name = "lblDatum";
+            this.lblDatum.Size = new System.Drawing.Size(136, 32);
+            this.lblDatum.TabIndex = 8;
+            this.lblDatum.Text = "08/04/2021";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1084, 746);
+            this.Controls.Add(this.lblDatum);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNaslov);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -563,6 +867,20 @@ namespace MuzickaRadnja
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,6 +918,28 @@ namespace MuzickaRadnja
         private System.Windows.Forms.Panel ChildFormsPanel;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblProdajnih;
+        private System.Windows.Forms.Label lblPotrosnih;
+        private System.Windows.Forms.Label lblUkupnoInstrumenata;
+        private System.Windows.Forms.Label lblRacuna;
+        private System.Windows.Forms.Label lblUgovora;
+        private System.Windows.Forms.Label lblPromet;
+        private System.Windows.Forms.Label lblKlijenata;
+        private System.Windows.Forms.Label lblDatum;
     }
 }
 

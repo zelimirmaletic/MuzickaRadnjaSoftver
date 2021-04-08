@@ -103,5 +103,28 @@ namespace MuzickaRadnja
             Form form = new NovaUplataForm();
             form.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form form = new RazduzivanjeForm();
+            form.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form form = new ListaUgovoraForm();
+            form.ShowDialog();
+        }
+
+        private void btnORadnji_Click(object sender, EventArgs e)
+        {
+            Form form = new PodaciRadnjaForm();
+            form.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

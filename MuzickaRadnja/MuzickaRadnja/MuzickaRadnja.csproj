@@ -10,7 +10,6 @@
     <Folder Include="Data\DatabaseScripts\" />
     <Folder Include="Data\Model\" />
     <Folder Include="Data\Exceptions\" />
-    <Folder Include="Resources\Images\" />
   </ItemGroup>
 
   <ItemGroup>
