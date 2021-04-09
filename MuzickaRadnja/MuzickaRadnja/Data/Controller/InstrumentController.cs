@@ -118,7 +118,7 @@ namespace MuzickaRadnja.Data.Controller
             }
             catch (System.Exception ex)
             {
-                throw new DataAccessException("Exception in ArtikalUtil -> GetArtikalById().", ex);
+                throw new DataAccessException("Exception in Instrument.", ex);
             }
             finally
             {
@@ -153,7 +153,7 @@ namespace MuzickaRadnja.Data.Controller
             }
             catch (System.Exception ex)
             {
-                throw new DataAccessException("Exception in ArtikalUtil -> GetAllArtikal().", ex);
+                throw new DataAccessException("Exception in Instrument.", ex);
             }
             finally
             {

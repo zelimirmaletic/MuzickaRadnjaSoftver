@@ -41,7 +41,7 @@ namespace MuzickaRadnja.Data.Model
 
         public override string ToString()
         {
-            return "Osoba" + " | " + Id.ToString() + " | " + IdMjesto.ToString() + " | " + Ime + " | " + Prezime + " | " + JBM + " | " + BrojTelefona + " | " + Email + " | " + DatumRodjenja.ToString() + " | " + Pol + " | " + KorisnickoIme + " | " + DatumZaposlenja;
+            return "Osoba" + " | " + Id.ToString() + " | " + IdMjesto.ToString() + " | " + Ime + " | " + Prezime + " | " + JMB + " | " + BrojTelefona + " | " + Email + " | " + DatumRodjenja.ToString() + " | " + Pol + " | " + KorisnickoIme + " | " + DatumZaposlenja;
         }
     }
 }

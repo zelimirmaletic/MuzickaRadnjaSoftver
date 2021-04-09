@@ -14,6 +14,8 @@ namespace MuzickaRadnja
 {
     public partial class Main : Form
     {
+        //Sifra zaposlenog - hardcode-ovana
+        public static readonly int IdZaposleni = 1;
         public Main()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace MuzickaRadnja
 
         private void loadStatistika()
         {
+            lblDatum.Text = DateTime.Now.ToString("dd.MM.yyyy");
             string statistika = StatistikaController.GetStatistika();
             var listaPodataka = statistika.Split('|');
             lblIznajmljivanje.Text = listaPodataka[0];
@@ -140,6 +143,17 @@ namespace MuzickaRadnja
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnNabavka_Click(object sender, EventArgs e)
+        {
+            Form form = new NovaNabavkaForm();
+            form.ShowDialog();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadStatistika();
         }
     }
 }

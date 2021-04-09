@@ -8,6 +8,8 @@ namespace MuzickaRadnja.Data.Model
         public int IdOsoba { get; set; }
         public int IdVrstaPlacanja { get; set; }
         public DateTime DatumVrijemeIzdavanja { get; set; }
+
+        public double UkupanIznos { get; set; }
         public double Popust { get; set; }
 
         public Racun()

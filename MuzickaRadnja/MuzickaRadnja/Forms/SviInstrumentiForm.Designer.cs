@@ -30,7 +30,7 @@ namespace MuzickaRadnja.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SviInstrumentiForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NaslovPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -82,8 +82,8 @@ namespace MuzickaRadnja.Forms
             // 
             // dgvTabela
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTabela.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTabela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,10 +94,13 @@ namespace MuzickaRadnja.Forms
             this.Column5});
             this.dgvTabela.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTabela.Location = new System.Drawing.Point(0, 50);
+            this.dgvTabela.MultiSelect = false;
             this.dgvTabela.Name = "dgvTabela";
+            this.dgvTabela.ReadOnly = true;
             this.dgvTabela.RowTemplate.Height = 25;
             this.dgvTabela.Size = new System.Drawing.Size(1088, 696);
             this.dgvTabela.TabIndex = 1;
+            this.dgvTabela.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTabela_CellContentClick);
             // 
             // Column1
             // 

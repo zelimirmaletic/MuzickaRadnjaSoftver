@@ -7,7 +7,6 @@ drop schema  if exists  muzicka_radnja;
 create schema muzicka_radnja default  character set utf8;
 use muzicka_radnja;
 
--- Radnja
 create table Mjesto(
     Id int(5) unsigned zerofill auto_increment,
     Naziv varchar(45) not null ,
@@ -16,6 +15,7 @@ create table Mjesto(
     primary key (Id)
 )ENGINE = InnoDB;
 
+-- Radnja
 create table Radnja(
     Id int(2) unsigned zerofill auto_increment,
     IdMjesto int unsigned not null ,
@@ -253,4 +253,12 @@ create table RazduzivanjeInstrumenta(
     foreign key (IdUgovor)
         references Ugovor(Id)
         on update cascade on delete restrict
+
+-- TRIGGERS
+
+
+-- STORED PROCEDURES
+
+
+
 )ENGINE = InnoDB;

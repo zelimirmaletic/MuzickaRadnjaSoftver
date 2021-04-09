@@ -44,6 +44,7 @@ namespace MuzickaRadnja
             this.btnNoviRacun = new System.Windows.Forms.Button();
             this.btnProdajaSideMenu = new System.Windows.Forms.Button();
             this.PanelInstrumentiSubMenu = new System.Windows.Forms.Panel();
+            this.btnNabavka = new System.Windows.Forms.Button();
             this.btnNoviInstrument = new System.Windows.Forms.Button();
             this.btnIynamljivanjeInstrumenti = new System.Windows.Forms.Button();
             this.btnProdajniInstrumenti = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@ namespace MuzickaRadnja
             this.lblKlijenata = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblDatum = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.SideMenuPanel.SuspendLayout();
             this.PanelIznajmljivanje.SuspendLayout();
             this.PanelMaloprodajaSubMenu.SuspendLayout();
@@ -129,10 +131,10 @@ namespace MuzickaRadnja
             this.btnORadnji.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnORadnji.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnORadnji.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
-            this.btnORadnji.Location = new System.Drawing.Point(0, 666);
+            this.btnORadnji.Location = new System.Drawing.Point(0, 673);
             this.btnORadnji.Name = "btnORadnji";
             this.btnORadnji.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnORadnji.Size = new System.Drawing.Size(250, 40);
+            this.btnORadnji.Size = new System.Drawing.Size(233, 40);
             this.btnORadnji.TabIndex = 8;
             this.btnORadnji.Text = "Podaci o radnji";
             this.btnORadnji.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,9 +149,9 @@ namespace MuzickaRadnja
             this.PanelIznajmljivanje.Controls.Add(this.button6);
             this.PanelIznajmljivanje.Controls.Add(this.button7);
             this.PanelIznajmljivanje.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelIznajmljivanje.Location = new System.Drawing.Point(0, 498);
+            this.PanelIznajmljivanje.Location = new System.Drawing.Point(0, 533);
             this.PanelIznajmljivanje.Name = "PanelIznajmljivanje";
-            this.PanelIznajmljivanje.Size = new System.Drawing.Size(250, 140);
+            this.PanelIznajmljivanje.Size = new System.Drawing.Size(233, 140);
             this.PanelIznajmljivanje.TabIndex = 7;
             this.PanelIznajmljivanje.Visible = false;
             // 
@@ -166,7 +168,7 @@ namespace MuzickaRadnja
             this.button4.Location = new System.Drawing.Point(0, 105);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(250, 35);
+            this.button4.Size = new System.Drawing.Size(233, 35);
             this.button4.TabIndex = 7;
             this.button4.Text = "Lista ugovora";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,7 +188,7 @@ namespace MuzickaRadnja
             this.button5.Location = new System.Drawing.Point(0, 70);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(250, 35);
+            this.button5.Size = new System.Drawing.Size(233, 35);
             this.button5.TabIndex = 6;
             this.button5.Text = "Razduživanje";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,7 +208,7 @@ namespace MuzickaRadnja
             this.button6.Location = new System.Drawing.Point(0, 35);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(250, 35);
+            this.button6.Size = new System.Drawing.Size(233, 35);
             this.button6.TabIndex = 5;
             this.button6.Text = "Uplata rate";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,7 +228,7 @@ namespace MuzickaRadnja
             this.button7.Location = new System.Drawing.Point(0, 0);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(250, 35);
+            this.button7.Size = new System.Drawing.Size(233, 35);
             this.button7.TabIndex = 4;
             this.button7.Text = "Novi ugovor";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,10 +244,10 @@ namespace MuzickaRadnja
             this.btnIznajmljivanjeSideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIznajmljivanjeSideMenu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIznajmljivanjeSideMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
-            this.btnIznajmljivanjeSideMenu.Location = new System.Drawing.Point(0, 458);
+            this.btnIznajmljivanjeSideMenu.Location = new System.Drawing.Point(0, 493);
             this.btnIznajmljivanjeSideMenu.Name = "btnIznajmljivanjeSideMenu";
             this.btnIznajmljivanjeSideMenu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnIznajmljivanjeSideMenu.Size = new System.Drawing.Size(250, 40);
+            this.btnIznajmljivanjeSideMenu.Size = new System.Drawing.Size(233, 40);
             this.btnIznajmljivanjeSideMenu.TabIndex = 6;
             this.btnIznajmljivanjeSideMenu.Text = "Iznajmljivanje";
             this.btnIznajmljivanjeSideMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,10 +263,10 @@ namespace MuzickaRadnja
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.button2.Location = new System.Drawing.Point(0, 706);
+            this.button2.Location = new System.Drawing.Point(0, 713);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 40);
+            this.button2.Size = new System.Drawing.Size(233, 40);
             this.button2.TabIndex = 5;
             this.button2.Text = "Odjavi se";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,9 +280,9 @@ namespace MuzickaRadnja
             this.PanelMaloprodajaSubMenu.Controls.Add(this.btnNoviRacun);
             this.PanelMaloprodajaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMaloprodajaSubMenu.ImeMode = System.Windows.Forms.ImeMode.Close;
-            this.PanelMaloprodajaSubMenu.Location = new System.Drawing.Point(0, 388);
+            this.PanelMaloprodajaSubMenu.Location = new System.Drawing.Point(0, 423);
             this.PanelMaloprodajaSubMenu.Name = "PanelMaloprodajaSubMenu";
-            this.PanelMaloprodajaSubMenu.Size = new System.Drawing.Size(250, 70);
+            this.PanelMaloprodajaSubMenu.Size = new System.Drawing.Size(233, 70);
             this.PanelMaloprodajaSubMenu.TabIndex = 4;
             this.PanelMaloprodajaSubMenu.Visible = false;
             // 
@@ -297,7 +299,7 @@ namespace MuzickaRadnja
             this.btnListaRacuna.Location = new System.Drawing.Point(0, 35);
             this.btnListaRacuna.Name = "btnListaRacuna";
             this.btnListaRacuna.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnListaRacuna.Size = new System.Drawing.Size(250, 35);
+            this.btnListaRacuna.Size = new System.Drawing.Size(233, 35);
             this.btnListaRacuna.TabIndex = 6;
             this.btnListaRacuna.Text = "Lista računa";
             this.btnListaRacuna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,7 +320,7 @@ namespace MuzickaRadnja
             this.btnNoviRacun.Location = new System.Drawing.Point(0, 0);
             this.btnNoviRacun.Name = "btnNoviRacun";
             this.btnNoviRacun.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnNoviRacun.Size = new System.Drawing.Size(250, 35);
+            this.btnNoviRacun.Size = new System.Drawing.Size(233, 35);
             this.btnNoviRacun.TabIndex = 5;
             this.btnNoviRacun.Text = "Novi račun";
             this.btnNoviRacun.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,10 +337,10 @@ namespace MuzickaRadnja
             this.btnProdajaSideMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProdajaSideMenu.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnProdajaSideMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
-            this.btnProdajaSideMenu.Location = new System.Drawing.Point(0, 348);
+            this.btnProdajaSideMenu.Location = new System.Drawing.Point(0, 383);
             this.btnProdajaSideMenu.Name = "btnProdajaSideMenu";
             this.btnProdajaSideMenu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnProdajaSideMenu.Size = new System.Drawing.Size(250, 40);
+            this.btnProdajaSideMenu.Size = new System.Drawing.Size(233, 40);
             this.btnProdajaSideMenu.TabIndex = 4;
             this.btnProdajaSideMenu.Text = "Maloprodaja";
             this.btnProdajaSideMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,6 +350,7 @@ namespace MuzickaRadnja
             // PanelInstrumentiSubMenu
             // 
             this.PanelInstrumentiSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
+            this.PanelInstrumentiSubMenu.Controls.Add(this.btnNabavka);
             this.PanelInstrumentiSubMenu.Controls.Add(this.btnNoviInstrument);
             this.PanelInstrumentiSubMenu.Controls.Add(this.btnIynamljivanjeInstrumenti);
             this.PanelInstrumentiSubMenu.Controls.Add(this.btnProdajniInstrumenti);
@@ -355,9 +358,29 @@ namespace MuzickaRadnja
             this.PanelInstrumentiSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelInstrumentiSubMenu.Location = new System.Drawing.Point(0, 208);
             this.PanelInstrumentiSubMenu.Name = "PanelInstrumentiSubMenu";
-            this.PanelInstrumentiSubMenu.Size = new System.Drawing.Size(250, 140);
+            this.PanelInstrumentiSubMenu.Size = new System.Drawing.Size(233, 175);
             this.PanelInstrumentiSubMenu.TabIndex = 3;
             this.PanelInstrumentiSubMenu.Visible = false;
+            // 
+            // btnNabavka
+            // 
+            this.btnNabavka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnNabavka.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNabavka.FlatAppearance.BorderSize = 0;
+            this.btnNabavka.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnNabavka.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
+            this.btnNabavka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNabavka.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNabavka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.btnNabavka.Location = new System.Drawing.Point(0, 140);
+            this.btnNabavka.Name = "btnNabavka";
+            this.btnNabavka.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnNabavka.Size = new System.Drawing.Size(233, 35);
+            this.btnNabavka.TabIndex = 8;
+            this.btnNabavka.Text = "Nova nabavka";
+            this.btnNabavka.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNabavka.UseVisualStyleBackColor = false;
+            this.btnNabavka.Click += new System.EventHandler(this.btnNabavka_Click);
             // 
             // btnNoviInstrument
             // 
@@ -372,7 +395,7 @@ namespace MuzickaRadnja
             this.btnNoviInstrument.Location = new System.Drawing.Point(0, 105);
             this.btnNoviInstrument.Name = "btnNoviInstrument";
             this.btnNoviInstrument.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnNoviInstrument.Size = new System.Drawing.Size(250, 35);
+            this.btnNoviInstrument.Size = new System.Drawing.Size(233, 35);
             this.btnNoviInstrument.TabIndex = 7;
             this.btnNoviInstrument.Text = "Novi instrument";
             this.btnNoviInstrument.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -392,9 +415,9 @@ namespace MuzickaRadnja
             this.btnIynamljivanjeInstrumenti.Location = new System.Drawing.Point(0, 70);
             this.btnIynamljivanjeInstrumenti.Name = "btnIynamljivanjeInstrumenti";
             this.btnIynamljivanjeInstrumenti.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnIynamljivanjeInstrumenti.Size = new System.Drawing.Size(250, 35);
+            this.btnIynamljivanjeInstrumenti.Size = new System.Drawing.Size(233, 35);
             this.btnIynamljivanjeInstrumenti.TabIndex = 6;
-            this.btnIynamljivanjeInstrumenti.Text = "Iznajmljivanje";
+            this.btnIynamljivanjeInstrumenti.Text = "Lista iznajmljivanje";
             this.btnIynamljivanjeInstrumenti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIynamljivanjeInstrumenti.UseVisualStyleBackColor = false;
             this.btnIynamljivanjeInstrumenti.Click += new System.EventHandler(this.btnIynamljivanjeInstrumenti_Click);
@@ -412,9 +435,9 @@ namespace MuzickaRadnja
             this.btnProdajniInstrumenti.Location = new System.Drawing.Point(0, 35);
             this.btnProdajniInstrumenti.Name = "btnProdajniInstrumenti";
             this.btnProdajniInstrumenti.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnProdajniInstrumenti.Size = new System.Drawing.Size(250, 35);
+            this.btnProdajniInstrumenti.Size = new System.Drawing.Size(233, 35);
             this.btnProdajniInstrumenti.TabIndex = 5;
-            this.btnProdajniInstrumenti.Text = "Prodajni";
+            this.btnProdajniInstrumenti.Text = "Lista prodajni";
             this.btnProdajniInstrumenti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProdajniInstrumenti.UseVisualStyleBackColor = false;
             this.btnProdajniInstrumenti.Click += new System.EventHandler(this.btnProdajniInstrumenti_Click);
@@ -432,9 +455,9 @@ namespace MuzickaRadnja
             this.btnSviInstrumenti.Location = new System.Drawing.Point(0, 0);
             this.btnSviInstrumenti.Name = "btnSviInstrumenti";
             this.btnSviInstrumenti.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnSviInstrumenti.Size = new System.Drawing.Size(250, 35);
+            this.btnSviInstrumenti.Size = new System.Drawing.Size(233, 35);
             this.btnSviInstrumenti.TabIndex = 4;
-            this.btnSviInstrumenti.Text = "Svi instrumenti";
+            this.btnSviInstrumenti.Text = "Lista svi instrumenti";
             this.btnSviInstrumenti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSviInstrumenti.UseVisualStyleBackColor = false;
             this.btnSviInstrumenti.Click += new System.EventHandler(this.btnSviInstrumenti_Click);
@@ -451,7 +474,7 @@ namespace MuzickaRadnja
             this.btnInstrumentMenu.Location = new System.Drawing.Point(0, 168);
             this.btnInstrumentMenu.Name = "btnInstrumentMenu";
             this.btnInstrumentMenu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnInstrumentMenu.Size = new System.Drawing.Size(250, 40);
+            this.btnInstrumentMenu.Size = new System.Drawing.Size(233, 40);
             this.btnInstrumentMenu.TabIndex = 3;
             this.btnInstrumentMenu.Text = "Instrumenti";
             this.btnInstrumentMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -466,7 +489,7 @@ namespace MuzickaRadnja
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(250, 68);
+            this.panel3.Size = new System.Drawing.Size(233, 68);
             this.panel3.TabIndex = 1;
             // 
             // label3
@@ -510,7 +533,7 @@ namespace MuzickaRadnja
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 100);
+            this.panel2.Size = new System.Drawing.Size(233, 100);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -831,15 +854,28 @@ namespace MuzickaRadnja
             // 
             // lblDatum
             // 
-            this.lblDatum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDatum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.lblDatum.Location = new System.Drawing.Point(936, 19);
+            this.lblDatum.Location = new System.Drawing.Point(403, 19);
             this.lblDatum.Name = "lblDatum";
             this.lblDatum.Size = new System.Drawing.Size(136, 32);
             this.lblDatum.TabIndex = 8;
             this.lblDatum.Text = "08/04/2021";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Location = new System.Drawing.Point(1032, 9);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(40, 40);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Main
             // 
@@ -847,6 +883,7 @@ namespace MuzickaRadnja
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1084, 746);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
@@ -948,6 +985,8 @@ namespace MuzickaRadnja
         private System.Windows.Forms.Label lblPromet;
         private System.Windows.Forms.Label lblKlijenata;
         private System.Windows.Forms.Label lblDatum;
+        private System.Windows.Forms.Button btnNabavka;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

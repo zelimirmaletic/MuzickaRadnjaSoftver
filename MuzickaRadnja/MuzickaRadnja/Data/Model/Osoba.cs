@@ -8,7 +8,7 @@ namespace MuzickaRadnja.Data.Model
         public int IdMjesto { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string JBM { get; set; }
+        public string JMB { get; set; }
         public string BrojTelefona { get; set; }
         public string Email { get; set; }
         public DateTime DatumRodjenja { get; set; }
@@ -24,7 +24,7 @@ namespace MuzickaRadnja.Data.Model
             IdMjesto = idMjesto;
             Ime = ime;
             Prezime = prezime;
-            JBM = jbm;
+            JMB = jbm;
             BrojTelefona = brojTelefona;
             Email = email;
             DatumRodjenja = datumRodjenja;
@@ -43,7 +43,7 @@ namespace MuzickaRadnja.Data.Model
 
         public override string ToString()
         {
-            return "Osoba" + " | " + Id.ToString() + " | " + IdMjesto.ToString() + " | " + Ime + " | " + Prezime + " | " + JBM + " | " + BrojTelefona + " | " + Email + " | " + DatumRodjenja.ToString() + " | " + Pol;
+            return "Osoba" + " | " + Id.ToString() + " | " + IdMjesto.ToString() + " | " + Ime + " | " + Prezime + " | " + JMB + " | " + BrojTelefona + " | " + Email + " | " + DatumRodjenja.ToString() + " | " + Pol;
         }
     }
 }

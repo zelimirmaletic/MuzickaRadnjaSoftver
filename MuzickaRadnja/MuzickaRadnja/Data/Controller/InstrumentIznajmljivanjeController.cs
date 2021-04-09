@@ -11,7 +11,7 @@ namespace MuzickaRadnja.Data.Controller
         //CRUD
         private static readonly string INSERT = "insert into InstrumentIznajmljivanje (Id,CijenaIznajmljivanja, DostupnaKolicina, UkupnaNabavnaKolicina) values(@Id,@CijenaIznajmljivanja,@DostupnaKolicina,@UkupnaNabavnaKolicina)";
         private static readonly string DELETE = "delete from InstrumentIznajmljivanje where Id=@Id; ";
-        private static readonly string UPDATE = "update InstrumentIznajmljivanje set CijenaIznajmljivanja=@CijenaIznajmljivanja, DostupnaKolicina=@DostupnaKolicina, UkupnaNabavnaKolicina=@UkupnaNabavnaKolicina where Id=@Id;";
+        private static readonly string UPDATE = "update InstrumentIznajmljivanje set CijenaIznajmljivanja=@CijenaIznajmljivanja, DostupnaKolicina=DostupnaKolicina+@DostupnaKolicina, UkupnaNabavnaKolicina=UkupnaNabavnaKolicina+@UkupnaNabavnaKolicina where Id=@Id;";
         private static readonly string READ = "select * from InstrumentIznajmljivanje where Id=@Id;";
         private static readonly string READ_ALL = "select * from InstrumentIznajmljivanje;";
 
@@ -116,8 +116,14 @@ namespace MuzickaRadnja.Data.Controller
                 reader = cmd.ExecuteReader();
                 reader.Read();
                 //Read superclass data
-                result = (InstrumentIznajmljivanje)InstrumentController.Read(id);
+                var instrument = InstrumentController.Read(id);
+                result.Id = instrument.Id;
+                result.Naziv = instrument.Naziv;
+                result.GodinaProizvodnje = instrument.GodinaProizvodnje;
+                result.NabavnaCijena = instrument.NabavnaCijena;
+                result.Vrsta = instrument.Vrsta;
                 //Read subclass data
+                result.IdInstrumentIznajmljivanje = reader.GetInt32(0);
                 result.CijenaIznajmljivanja = reader.GetDouble(1);
                 result.DostupnaKolicina = reader.GetInt32(2);
                 result.UkupnaNabavnaKolicina = reader.GetInt32(3);

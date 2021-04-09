@@ -46,7 +46,7 @@ namespace MuzickaRadnja.Forms
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbZaposleni = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbDatumIzdavanja = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -260,7 +260,7 @@ namespace MuzickaRadnja.Forms
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbZaposleni);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.tbDatumIzdavanja);
             this.groupBox1.Controls.Add(this.label5);
@@ -280,13 +280,13 @@ namespace MuzickaRadnja.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Račun";
             // 
-            // textBox1
+            // tbZaposleni
             // 
-            this.textBox1.Location = new System.Drawing.Point(676, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(270, 27);
-            this.textBox1.TabIndex = 36;
+            this.tbZaposleni.Location = new System.Drawing.Point(676, 70);
+            this.tbZaposleni.Name = "tbZaposleni";
+            this.tbZaposleni.ReadOnly = true;
+            this.tbZaposleni.Size = new System.Drawing.Size(270, 27);
+            this.tbZaposleni.TabIndex = 36;
             // 
             // label6
             // 
@@ -364,6 +364,7 @@ namespace MuzickaRadnja.Forms
             this.cbSifra.Name = "cbSifra";
             this.cbSifra.Size = new System.Drawing.Size(103, 28);
             this.cbSifra.TabIndex = 28;
+            this.cbSifra.SelectedIndexChanged += new System.EventHandler(this.cbSifra_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -606,7 +607,7 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbZaposleni;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbDatumIzdavanja;
         private System.Windows.Forms.Label label5;

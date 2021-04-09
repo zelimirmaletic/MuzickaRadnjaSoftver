@@ -30,11 +30,17 @@ namespace MuzickaRadnja.Forms
                 drvr.Cells[0].Value = obj.Id.ToString();
                 drvr.Cells[1].Value = obj.Naziv;
                 drvr.Cells[2].Value = obj.Vrsta;
-                drvr.Cells[3].Value = obj.GodinaProizvodnje.ToString();
+                drvr.Cells[3].Value = obj.GodinaProizvodnje.Year.ToString();
                 drvr.Cells[4].Value = obj.NabavnaCijena.ToString();
                 dgvTabela.Rows.Add(drvr);
             }
             
         }
+
+        private void dgvTabela_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

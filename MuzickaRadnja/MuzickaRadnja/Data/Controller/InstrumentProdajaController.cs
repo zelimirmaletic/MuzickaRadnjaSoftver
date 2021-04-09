@@ -11,7 +11,7 @@ namespace MuzickaRadnja.Data.DataAccess
         //CRUD
         private static readonly string INSERT = "insert into InstrumentProdaja (Id,MaloprodajnaCijena, DostupnaKolicina, UkupnaNabavnaKolicina) values(@Id,@MaloprodajnaCijena,@DostupnaKolicina,@UkupnaNabavnaKolicina)";
         private static readonly string DELETE = "delete from InstrumentProdaja where Id=@Id; ";
-        private static readonly string UPDATE = "update InstrumentProdaja set MaloprodajnaCijena=@MaloprodajnaCijena, DostupnaKolicina=@DostupnaKolicina, UkupnaNabavnaKolicina=@UkupnaNabavnaKolicina where Id=@Id;";
+        private static readonly string UPDATE = "update InstrumentProdaja set MaloprodajnaCijena=@MaloprodajnaCijena, DostupnaKolicina=DostupnaKolicina+@DostupnaKolicina, UkupnaNabavnaKolicina=UkupnaNabavnaKolicina+@UkupnaNabavnaKolicina where Id=@Id;";
         private static readonly string READ = "select * from InstrumentProdaja where Id=@Id;";
         private static readonly string READ_ALL = "select * from InstrumentProdaja;";
 
@@ -85,6 +85,7 @@ namespace MuzickaRadnja.Data.DataAccess
                 cmd.Parameters.AddWithValue("@CijenaIznajmljivanja", obj.MaloprodajnaCijena);
                 cmd.Parameters.AddWithValue("@DostupnaKolicina", obj.DostupnaKolicina);
                 cmd.Parameters.AddWithValue("@UkupnaNabavnaKolicina", obj.UkupnaNabavnaKolicina);
+                cmd.Parameters.AddWithValue("@MaloprodajnaCijena", obj.MaloprodajnaCijena);
                 cmd.ExecuteNonQuery();
                 //Update superclass data
                 InstrumentController.Update(new Instrument(obj.Id, obj.Naziv, obj.Vrsta, obj.GodinaProizvodnje, obj.NabavnaCijena));
@@ -116,8 +117,14 @@ namespace MuzickaRadnja.Data.DataAccess
                 reader = cmd.ExecuteReader();
                 reader.Read();
                 //Read superclass data
-                result = (InstrumentProdaja)InstrumentController.Read(id);
+                var instrument = InstrumentController.Read(id);
+                result.Id = instrument.Id;
+                result.Naziv = instrument.Naziv;
+                result.GodinaProizvodnje = instrument.GodinaProizvodnje;
+                result.NabavnaCijena = instrument.NabavnaCijena;
+                result.Vrsta = instrument.Vrsta;
                 //Read subclass data
+                result.IdInstrumentProdaja = reader.GetInt32(0);
                 result.MaloprodajnaCijena = reader.GetDouble(1);
                 result.DostupnaKolicina = reader.GetInt32(2);
                 result.UkupnaNabavnaKolicina = reader.GetInt32(3);
