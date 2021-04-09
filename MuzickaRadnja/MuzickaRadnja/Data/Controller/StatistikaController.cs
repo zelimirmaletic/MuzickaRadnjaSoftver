@@ -12,7 +12,7 @@ namespace MuzickaRadnja.Data.Controller
 {
     class StatistikaController
     {
-        private static readonly string STATISTIKA = "select sum(UkupnaNabavnaKolicina) from instrumentiznajmljivanje union all select sum(UkupnaNabavnaKolicina) from instrumentprodaja union all select count(Id) from racun union all select count(Id) from ugovor union all select sum(I.MaloprodajnaCijena*T.Kolicina+(I.MaloprodajnaCijena*T.Kolicina*0.17)) from racun_ima_instrumentprodaja T inner join instrumentprodaja I on I.Id=T.IdInstrument union all select count(Id) from klijent;";
+        private static readonly string STATISTIKA = "call GET_STATISTIKA(@PDV)";
 
         public static string GetStatistika()
         {
@@ -27,13 +27,14 @@ namespace MuzickaRadnja.Data.Controller
                 conn = MySqlUtil.GetConnection();
                 cmd = conn.CreateCommand();
                 cmd.CommandText = STATISTIKA;
+                cmd.Parameters.AddWithValue("@PDV", Main.PDV);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                     statistika += reader.GetDouble(0).ToString()+"|";
             }
             catch (System.Exception ex)
             {
-                throw new DataAccessException("Exception in ArtikalUtil -> GetAllArtikal().", ex);
+                throw new DataAccessException("Exception in Statistika.", ex);
             }
             finally
             {

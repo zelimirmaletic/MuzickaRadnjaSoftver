@@ -36,14 +36,17 @@ namespace MuzickaRadnja.Forms
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NaslovPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnOtkazi = new System.Windows.Forms.Button();
+            this.btnSacuvaj = new System.Windows.Forms.Button();
+            this.tbUkupno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbZaposleni = new System.Windows.Forms.TextBox();
@@ -73,6 +76,7 @@ namespace MuzickaRadnja.Forms
             this.label9 = new System.Windows.Forms.Label();
             this.tbNaziv = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnIzbrisiRed = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.NaslovPanel.SuspendLayout();
@@ -91,8 +95,12 @@ namespace MuzickaRadnja.Forms
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Cijena,
+            this.Column6,
+            this.Column7});
             this.dgvTabela.Location = new System.Drawing.Point(12, 306);
+            this.dgvTabela.MultiSelect = false;
             this.dgvTabela.Name = "dgvTabela";
             this.dgvTabela.RowTemplate.Height = 25;
             this.dgvTabela.Size = new System.Drawing.Size(1068, 352);
@@ -129,9 +137,27 @@ namespace MuzickaRadnja.Forms
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Nabavna cijena";
+            this.Column5.HeaderText = "Prodajna cijena";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // Cijena
+            // 
+            this.Cijena.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Cijena.HeaderText = "Cijena sa PDV";
+            this.Cijena.Name = "Cijena";
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "Količina";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "Ukupno";
+            this.Column7.Name = "Column7";
             // 
             // lblNaslov
             // 
@@ -183,6 +209,7 @@ namespace MuzickaRadnja.Forms
             this.button2.TabIndex = 26;
             this.button2.Text = "Izbriši unos";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -199,50 +226,54 @@ namespace MuzickaRadnja.Forms
             this.button1.TabIndex = 25;
             this.button1.Text = "Dodaj u tabelu";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // btnOtkazi
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(839, 708);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 30);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Otkaži";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnOtkazi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOtkazi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.btnOtkazi.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnOtkazi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnOtkazi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOtkazi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOtkazi.ForeColor = System.Drawing.Color.White;
+            this.btnOtkazi.Location = new System.Drawing.Point(839, 708);
+            this.btnOtkazi.Name = "btnOtkazi";
+            this.btnOtkazi.Size = new System.Drawing.Size(110, 30);
+            this.btnOtkazi.TabIndex = 28;
+            this.btnOtkazi.Text = "Otkaži";
+            this.btnOtkazi.UseVisualStyleBackColor = false;
+            this.btnOtkazi.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // btnSacuvaj
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(963, 708);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 30);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Izdaj račun";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnSacuvaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSacuvaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(189)))), ((int)(((byte)(198)))));
+            this.btnSacuvaj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnSacuvaj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnSacuvaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSacuvaj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSacuvaj.ForeColor = System.Drawing.Color.White;
+            this.btnSacuvaj.Location = new System.Drawing.Point(963, 708);
+            this.btnSacuvaj.Name = "btnSacuvaj";
+            this.btnSacuvaj.Size = new System.Drawing.Size(117, 30);
+            this.btnSacuvaj.TabIndex = 27;
+            this.btnSacuvaj.Text = "Izdaj račun";
+            this.btnSacuvaj.UseVisualStyleBackColor = false;
+            this.btnSacuvaj.Click += new System.EventHandler(this.btnSacuvaj_Click);
             // 
-            // textBox2
+            // tbUkupno
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.textBox2.Location = new System.Drawing.Point(963, 664);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(117, 33);
-            this.textBox2.TabIndex = 30;
+            this.tbUkupno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbUkupno.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbUkupno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.tbUkupno.Location = new System.Drawing.Point(963, 664);
+            this.tbUkupno.Name = "tbUkupno";
+            this.tbUkupno.ReadOnly = true;
+            this.tbUkupno.Size = new System.Drawing.Size(117, 33);
+            this.tbUkupno.TabIndex = 30;
+            this.tbUkupno.Text = "0.00";
+            this.tbUkupno.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -250,11 +281,11 @@ namespace MuzickaRadnja.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.label7.Location = new System.Drawing.Point(839, 672);
+            this.label7.Location = new System.Drawing.Point(734, 667);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 25);
+            this.label7.Size = new System.Drawing.Size(224, 25);
             this.label7.TabIndex = 29;
-            this.label7.Text = "UKUPNO";
+            this.label7.Text = "UKUPNO SA POPUSTOM";
             // 
             // groupBox1
             // 
@@ -324,6 +355,7 @@ namespace MuzickaRadnja.Forms
             this.tbPopust.Name = "tbPopust";
             this.tbPopust.Size = new System.Drawing.Size(168, 27);
             this.tbPopust.TabIndex = 32;
+            this.tbPopust.Text = "0";
             // 
             // label4
             // 
@@ -461,10 +493,10 @@ namespace MuzickaRadnja.Forms
             // 
             // tbProdajnaCijena
             // 
-            this.tbProdajnaCijena.Location = new System.Drawing.Point(751, 26);
+            this.tbProdajnaCijena.Location = new System.Drawing.Point(769, 26);
             this.tbProdajnaCijena.Name = "tbProdajnaCijena";
             this.tbProdajnaCijena.ReadOnly = true;
-            this.tbProdajnaCijena.Size = new System.Drawing.Size(118, 27);
+            this.tbProdajnaCijena.Size = new System.Drawing.Size(100, 27);
             this.tbProdajnaCijena.TabIndex = 36;
             // 
             // label12
@@ -554,18 +586,35 @@ namespace MuzickaRadnja.Forms
             this.label8.TabIndex = 27;
             this.label8.Text = "Naziv";
             // 
+            // btnIzbrisiRed
+            // 
+            this.btnIzbrisiRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.btnIzbrisiRed.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnIzbrisiRed.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.btnIzbrisiRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIzbrisiRed.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnIzbrisiRed.ForeColor = System.Drawing.Color.White;
+            this.btnIzbrisiRed.Location = new System.Drawing.Point(12, 675);
+            this.btnIzbrisiRed.Name = "btnIzbrisiRed";
+            this.btnIzbrisiRed.Size = new System.Drawing.Size(116, 30);
+            this.btnIzbrisiRed.TabIndex = 33;
+            this.btnIzbrisiRed.Text = "Izbriši red";
+            this.btnIzbrisiRed.UseVisualStyleBackColor = false;
+            this.btnIzbrisiRed.Click += new System.EventHandler(this.btnIzbrisiRed_Click);
+            // 
             // NoviRacunForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1092, 746);
+            this.Controls.Add(this.btnIzbrisiRed);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbUkupno);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnOtkazi);
+            this.Controls.Add(this.btnSacuvaj);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvTabela);
@@ -592,19 +641,14 @@ namespace MuzickaRadnja.Forms
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTabela;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel NaslovPanel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnOtkazi;
+        private System.Windows.Forms.Button btnSacuvaj;
+        private System.Windows.Forms.TextBox tbUkupno;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbZaposleni;
@@ -634,5 +678,14 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbGodinaProizvodnje;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnIzbrisiRed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cijena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

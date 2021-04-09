@@ -36,7 +36,8 @@ namespace MuzickaRadnja.Forms
                 drvr.Cells[3].Value = obj.GodinaProizvodnje.Year.ToString();
                 drvr.Cells[4].Value = obj.NabavnaCijena.ToString();
                 drvr.Cells[5].Value = obj.MaloprodajnaCijena.ToString();
-                drvr.Cells[6].Value = obj.DostupnaKolicina.ToString();
+                drvr.Cells[6].Value = (obj.MaloprodajnaCijena + obj.MaloprodajnaCijena * Main.PDV).ToString("0.00");
+                drvr.Cells[7].Value = obj.DostupnaKolicina.ToString();
                 dgvTabela.Rows.Add(drvr);
             }
 

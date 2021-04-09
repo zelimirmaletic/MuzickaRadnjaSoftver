@@ -16,6 +16,8 @@ namespace MuzickaRadnja
     {
         //Sifra zaposlenog - hardcode-ovana
         public static readonly int IdZaposleni = 1;
+        //Stopa PDV-a
+        public static readonly double PDV = 0.17;
         public Main()
         {
             InitializeComponent();

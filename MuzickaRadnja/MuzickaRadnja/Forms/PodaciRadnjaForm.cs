@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MuzickaRadnja.Data.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace MuzickaRadnja.Forms
         public PodaciRadnjaForm()
         {
             InitializeComponent();
+            ucitajPodatke();
+        }
+
+        private void ucitajPodatke()
+        {
+            var radnja = RadnjaController.Read(1);
+            var podaci = radnja.Split('|');
+            tbMjesto.Text = podaci[1];
+            tbNaziv.Text = podaci[2];
+            tbAdresa.Text = podaci[3];
+            tbRacun.Text = podaci[4];
+            tbBanka.Text = podaci[5];
+            tbEmail.Text = podaci[6];
+            tbTelefon.Text = podaci[7];
         }
     }
 }

@@ -16,13 +16,14 @@ namespace MuzickaRadnja.Data.Model
         {
         }
 
-        public Racun(int id, int idOsoba, int idVrstaPlacanja, DateTime datumVrijemeIzdavanja, double popust)
+        public Racun(int id, int idOsoba, int idVrstaPlacanja, DateTime datumVrijemeIzdavanja, double popust, double ukupanIznos)
         {
             Id = id;
             IdOsoba = idOsoba;
             IdVrstaPlacanja = idVrstaPlacanja;
             DatumVrijemeIzdavanja = datumVrijemeIzdavanja;
             Popust = popust;
+            UkupanIznos = ukupanIznos;
         }
 
         public override bool Equals(object? obj)

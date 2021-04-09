@@ -36,8 +36,8 @@ namespace MuzickaRadnja.Forms
             this.label7 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbBanka = new System.Windows.Forms.TextBox();
-            this.tbVrsta = new System.Windows.Forms.TextBox();
-            this.tbNaziv = new System.Windows.Forms.TextBox();
+            this.tbRacun = new System.Windows.Forms.TextBox();
+            this.tbAdresa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@ namespace MuzickaRadnja.Forms
             this.NaslovPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tbNaziiv = new System.Windows.Forms.TextBox();
+            this.tbNaziv = new System.Windows.Forms.TextBox();
             this.NaslovPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -105,21 +105,21 @@ namespace MuzickaRadnja.Forms
             this.tbBanka.Size = new System.Drawing.Size(325, 23);
             this.tbBanka.TabIndex = 35;
             // 
-            // tbVrsta
+            // tbRacun
             // 
-            this.tbVrsta.Location = new System.Drawing.Point(97, 154);
-            this.tbVrsta.Name = "tbVrsta";
-            this.tbVrsta.ReadOnly = true;
-            this.tbVrsta.Size = new System.Drawing.Size(325, 23);
-            this.tbVrsta.TabIndex = 34;
+            this.tbRacun.Location = new System.Drawing.Point(97, 154);
+            this.tbRacun.Name = "tbRacun";
+            this.tbRacun.ReadOnly = true;
+            this.tbRacun.Size = new System.Drawing.Size(325, 23);
+            this.tbRacun.TabIndex = 34;
             // 
-            // tbNaziv
+            // tbAdresa
             // 
-            this.tbNaziv.Location = new System.Drawing.Point(97, 114);
-            this.tbNaziv.Name = "tbNaziv";
-            this.tbNaziv.ReadOnly = true;
-            this.tbNaziv.Size = new System.Drawing.Size(325, 23);
-            this.tbNaziv.TabIndex = 33;
+            this.tbAdresa.Location = new System.Drawing.Point(97, 114);
+            this.tbAdresa.Name = "tbAdresa";
+            this.tbAdresa.ReadOnly = true;
+            this.tbAdresa.Size = new System.Drawing.Size(325, 23);
+            this.tbAdresa.TabIndex = 33;
             // 
             // label5
             // 
@@ -211,13 +211,13 @@ namespace MuzickaRadnja.Forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tbNaziiv
+            // tbNaziv
             // 
-            this.tbNaziiv.Location = new System.Drawing.Point(97, 79);
-            this.tbNaziiv.Name = "tbNaziiv";
-            this.tbNaziiv.ReadOnly = true;
-            this.tbNaziiv.Size = new System.Drawing.Size(325, 23);
-            this.tbNaziiv.TabIndex = 32;
+            this.tbNaziv.Location = new System.Drawing.Point(97, 79);
+            this.tbNaziv.Name = "tbNaziv";
+            this.tbNaziv.ReadOnly = true;
+            this.tbNaziv.Size = new System.Drawing.Size(325, 23);
+            this.tbNaziv.TabIndex = 32;
             // 
             // PodaciRadnjaForm
             // 
@@ -230,15 +230,15 @@ namespace MuzickaRadnja.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbBanka);
-            this.Controls.Add(this.tbVrsta);
-            this.Controls.Add(this.tbNaziv);
+            this.Controls.Add(this.tbRacun);
+            this.Controls.Add(this.tbAdresa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NaslovPanel);
-            this.Controls.Add(this.tbNaziiv);
+            this.Controls.Add(this.tbNaziv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PodaciRadnjaForm";
@@ -260,8 +260,8 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.TextBox tbBanka;
-        private System.Windows.Forms.TextBox tbVrsta;
-        private System.Windows.Forms.TextBox tbNaziv;
+        private System.Windows.Forms.TextBox tbRacun;
+        private System.Windows.Forms.TextBox tbAdresa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -270,6 +270,6 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.Panel NaslovPanel;
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox tbNaziiv;
+        private System.Windows.Forms.TextBox tbNaziv;
     }
 }

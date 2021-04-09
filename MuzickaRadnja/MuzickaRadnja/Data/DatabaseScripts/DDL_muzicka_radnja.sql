@@ -253,12 +253,47 @@ create table RazduzivanjeInstrumenta(
     foreign key (IdUgovor)
         references Ugovor(Id)
         on update cascade on delete restrict
+)ENGINE = InnoDB;
 
 -- TRIGGERS
-
+DELIMITER $$
+CREATE TRIGGER azuriraj_kolicinu_prodajnog_artikla
+    AFTER INSERT
+    ON `racun_ima_instrumentprodaja` FOR EACH ROW
+BEGIN
+	    update `instrumentprodaja` I set I.DostupnaKolicina=I.DostupnaKolicina-new.Kolicina where new.IdInstrument=I.Id;
+END$$    
+DELIMITER ;
 
 -- STORED PROCEDURES
+DELIMITER $$
+CREATE PROCEDURE `GET_STATISTIKA` (IN PDV DOUBLE)
+BEGIN
+    select sum(DostupnaKolicina) from instrumentiznajmljivanje union all 
+    select sum(DostupnaKolicina) from instrumentprodaja union all 
+    select count(Id) from racun union all 
+    select count(Id) from ugovor union all 
+    select sum(I.MaloprodajnaCijena*T.Kolicina+(I.MaloprodajnaCijena*T.Kolicina*PDV)) from racun_ima_instrumentprodaja T inner join instrumentprodaja I on I.Id=T.IdInstrument union all 
+    select count(Id) from klijent;
+END$$    
+DELIMITER ;
 
+-- VIEWS
+create view VIEW_LISTA_RACUNA AS
+select R.Id, R.DatumVrijemeIzdavanja,VP.Naziv,R.Popust,O.Ime,O.Prezime,R.UkupanIznos from racun R 
+inner join osoba O on O.Id=R.IdOsoba 
+inner join VrstaPlacanja VP on VP.Id=R.IdVrstaPlacanja;
 
+create view VIEW_LISTA_STAVKI as 
+select R.IdRacun as `Sifra racuna`, R.IdInstrument as `Sifra artikla`,I.Naziv,I.Vrsta,IP.MaloprodajnaCijena, IP.MaloprodajnaCijena+IP.MaloprodajnaCijena*0.17 as `Cijena sa PDV`, R.Kolicina, R.Kolicina*(IP.MaloprodajnaCijena+IP.MaloprodajnaCijena*0.17) as `Ukupno sa PDV`
+from racun_ima_instrumentprodaja R
+inner join `instrumentprodaja` IP on IP.Id=R.IdInstrument
+inner join `instrument` I on I.Id=R.IdInstrument
 
-)ENGINE = InnoDB;
+create view VIEW_LISTA_UGOVORA as
+select UG.IdUgovor,concat(O.Ime," ",O.Prezime) as `Klijent`,U.DatumSklapanja,concat(Z.Ime," ",Z.Prezime) as `Zaposleni`,
+U.PeriodIznajmljivanja, U.Otplaceno,U.BrojRata
+from ugovor_ima_instrumentiznajmljivanje UG
+inner join ugovor U on U.Id=UG.IdUgovor
+inner join osoba O on O.Id=U.IdKlijent
+inner join osoba Z on Z.Id=U.IdZaposeni

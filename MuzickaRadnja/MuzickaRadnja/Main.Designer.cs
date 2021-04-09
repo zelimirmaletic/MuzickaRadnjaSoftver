@@ -77,6 +77,7 @@ namespace MuzickaRadnja
             this.lblUgovora = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.lblPromet = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -783,6 +784,7 @@ namespace MuzickaRadnja
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(84)))));
+            this.panel11.Controls.Add(this.label11);
             this.panel11.Controls.Add(this.lblPromet);
             this.panel11.Controls.Add(this.label9);
             this.panel11.Location = new System.Drawing.Point(266, 272);
@@ -790,17 +792,29 @@ namespace MuzickaRadnja
             this.panel11.Size = new System.Drawing.Size(806, 40);
             this.panel11.TabIndex = 7;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.label11.Location = new System.Drawing.Point(223, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 32);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "KM";
+            // 
             // lblPromet
             // 
             this.lblPromet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPromet.AutoSize = true;
             this.lblPromet.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPromet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblPromet.Location = new System.Drawing.Point(712, 5);
+            this.lblPromet.Location = new System.Drawing.Point(712, 3);
             this.lblPromet.Name = "lblPromet";
             this.lblPromet.Size = new System.Drawing.Size(27, 32);
             this.lblPromet.TabIndex = 9;
             this.lblPromet.Text = "0";
+            this.lblPromet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
@@ -870,9 +884,9 @@ namespace MuzickaRadnja
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRefresh.FlatAppearance.BorderSize = 0;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(1032, 9);
+            this.btnRefresh.Location = new System.Drawing.Point(1037, 19);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(40, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
             this.btnRefresh.TabIndex = 9;
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -987,6 +1001,7 @@ namespace MuzickaRadnja
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Button btnNabavka;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label11;
     }
 }
 

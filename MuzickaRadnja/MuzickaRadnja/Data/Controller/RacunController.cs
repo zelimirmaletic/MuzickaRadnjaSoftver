@@ -16,9 +16,9 @@ namespace MuzickaRadnja.Data.Controller
         private static readonly string INSERT = "insert into Racun (IdOsoba,IdVrstaPlacanja,DatumVrijemeIzdavanja,UkupanIznos,Popust) values (@IdOsoba,@IdVrstaPlacanja,@DatumVrijemeIzdavanja,@UkupanIznos,@Popust);";
         private static readonly string READ = "select * from Racun where Id=@Id;";
         private static readonly string READ_ALL = "select * from Racun;";
-        private static readonly string READ_ALL_FORMATED = "select R.Id, R.DatumVrijemeIzdavanja,VP.Naziv,R.Popust,O.Ime,O.Prezime,R.UkupanIznos from racun R inner join osoba O on O.Id=R.IdOsoba inner join VrstaPlacanja VP on VP.Id=R.IdVrstaPlacanja;";
+        private static readonly string READ_ALL_FORMATED = "select * from VIEW_LISTA_RACUNA";
 
-        private long Insert(Racun obj)
+        public static long Insert(Racun obj)
         {
             long id = 0;
             MySqlConnection conn = null;
@@ -33,6 +33,7 @@ namespace MuzickaRadnja.Data.Controller
                 cmd.Parameters.AddWithValue("@IdVrstaPlacanja", obj.IdVrstaPlacanja);
                 cmd.Parameters.AddWithValue("@DatumVrijemeIzdavanja", obj.DatumVrijemeIzdavanja);
                 cmd.Parameters.AddWithValue("@UkupanIznos", obj.UkupanIznos);
+                cmd.Parameters.AddWithValue("@Popust", obj.Popust);
                 cmd.ExecuteNonQuery();
                 id = cmd.LastInsertedId;
             }
