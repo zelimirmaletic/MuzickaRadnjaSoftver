@@ -17,6 +17,7 @@ namespace MuzickaRadnja.Data.Controller
         private static readonly string READ = "select * from Ugovor where Id=@Id;";
         private static readonly string READ_ALL = "select * from Ugovor;";
         private static readonly string READ_ALL_FORMATED = "select * from VIEW_LISTA_UGOVORA";
+        private static readonly string IZNOS_RATE = "call GET_IZNOS_RATE(@IdUgovor)";
 
 
 
@@ -42,7 +43,7 @@ namespace MuzickaRadnja.Data.Controller
                     row += reader.GetString(3) + "|";
                     row += reader.GetInt32(4).ToString() + "|";
 
-                    row+=reader.GetBoolean(5) == true ? "DA|" : "NE|";
+                    row+=reader.GetInt32(6) == 0 ? "DA|" : "NE|";
                     row += reader.GetInt32(6).ToString();
 
                     result.Add(row);
@@ -89,6 +90,37 @@ namespace MuzickaRadnja.Data.Controller
             return id;
         }
 
+        public static double GetIznosRate(int idUgovor)
+        {
+            MySqlConnection connection = null;
+            MySqlCommand cmd = null;
+            MySqlDataReader reader = null;
+            double rata = 0.0;
+
+            try
+            {
+                connection = MySqlUtil.GetConnection();
+                String query = IZNOS_RATE;
+                cmd = connection.CreateCommand();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@IdUgovor", idUgovor);
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                rata = reader.GetDouble(0);
+            }
+            catch (MySqlException e)
+            {
+
+            }
+            finally
+            {
+                MySqlUtil.CloseQuietly(connection);
+                MySqlUtil.CloseQuietly(reader);
+            }
+
+            return rata;
+        }
+
         public static long Insert(Ugovor obj)
         {
             long id = 0;
@@ -126,6 +158,46 @@ namespace MuzickaRadnja.Data.Controller
 
         }
 
+        public static List<Ugovor> ReadAll()
+        {
+            var result = new List<Ugovor>();
+            MySqlConnection conn = null;
+            MySqlCommand cmd;
+            MySqlDataReader reader = null;
+            try
+            {
+                conn = MySqlUtil.GetConnection();
+                cmd = conn.CreateCommand();
+                cmd.CommandText = READ_ALL;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result.Add(new Ugovor()
+                    {
+                        Id = reader.GetInt32(0),
+                        IdKlijent=reader.GetInt32(1),
+                        IdZaposleni=reader.GetInt32(2),
+                        DatumSklapanja = reader.GetDateTime(3),
+                        PlacanjeNaRate = reader.GetBoolean(4),
+                        PeriodIznajmljivanja=reader.GetInt32(5),
+                        Otplaceno=reader.GetBoolean(6),
+                        Potpisan=reader.GetBoolean(7),
+                        Opis = reader.GetString(8),
+                        BrojRata = reader.GetInt32(9),
+                        ProduzavanjeUgovora=reader.GetInt32(10)     
+                    });
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw new DataAccessException("Exception in Ugovor.", ex);
+            }
+            finally
+            {
+                MySqlUtil.CloseQuietly(reader, conn);
+            }
+            return result;
+        }
 
 
     }

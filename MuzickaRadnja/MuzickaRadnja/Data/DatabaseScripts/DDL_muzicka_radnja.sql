@@ -239,7 +239,7 @@ create table RazduzivanjeInstrumenta(
     IdZaposleni int unsigned not null ,
     IdKlijent int unsigned not null ,
     IdUgovor int unsigned not null ,
-    DatumVracanja date not null ,
+    DatumVracanja datetime not null ,
     OpisOstecenja text(150),
     NaknadaZaOstecenja double default 0.0,
     -- KEYS
@@ -274,6 +274,15 @@ BEGIN
 END$$    
 DELIMITER ;
 
+DELIMITER $$
+CREATE TRIGGER azuriraj_broj_rata_nakon_uplate
+    AFTER INSERT
+    ON `ugovor_uplata` FOR EACH ROW
+BEGIN
+	    update ugovor U set BrojRata=BrojRata-1 where U.Id=new.IdUgovor;
+END$$    
+DELIMITER ;
+
 -- STORED PROCEDURES
 DELIMITER $$
 CREATE PROCEDURE `GET_STATISTIKA` (IN PDV DOUBLE)
@@ -284,6 +293,14 @@ BEGIN
     select count(Id) from ugovor union all 
     select sum(((I.MaloprodajnaCijena-I.MaloprodajnaCijena*R.Popust)*convert(T.Kolicina , double)+((I.MaloprodajnaCijena-I.MaloprodajnaCijena*R.Popust)*convert(T.Kolicina , double)*0.17))) as `Ukupno` from racun_ima_instrumentprodaja T inner join instrumentprodaja I on I.Id=T.IdInstrument inner join Racun R on R.Id=T.IdRacun  union all 
     select count(Id) from klijent;
+END$$    
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE `GET_IZNOS_RATE` (IN IdUgovorParam int)
+BEGIN
+select sum(I.`CijenaIznajmljivanja`) as `Rata` from `ugovor_ima_instrumentiznajmljivanje` UI
+inner join `instrumentiznajmljivanje` I on I.Id=UI.`IdInstrument` where UI.IdUgovor=IdUgovorParam;
 END$$    
 DELIMITER ;
 
@@ -305,4 +322,13 @@ U.PeriodIznajmljivanja, U.Otplaceno,U.BrojRata
 from ugovor_ima_instrumentiznajmljivanje UG
 inner join ugovor U on U.Id=UG.IdUgovor
 inner join osoba O on O.Id=U.IdKlijent
+inner join osoba Z on Z.Id=U.IdZaposeni;
+
+create view VIEW_LISTA_UGOVORA_RAZDUZIVANJE as
+select UG.IdUgovor,UG.IdInstrument,I.Naziv,concat(O.Id," ",O.Ime," ",O.Prezime) as `Klijent`,concat(O.Id," ",Z.Ime," ",Z.Prezime) as `Zaposleni`,
+U.DatumSklapanja,U.BrojRata
+from ugovor_ima_instrumentiznajmljivanje UG
+inner join ugovor U on U.Id=UG.IdUgovor
+inner join osoba O on O.Id=U.IdKlijent
 inner join osoba Z on Z.Id=U.IdZaposeni
+inner join instrument I on I.Id=UG.IdInstrument;

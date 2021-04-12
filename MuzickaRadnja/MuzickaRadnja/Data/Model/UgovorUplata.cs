@@ -23,7 +23,7 @@ namespace MuzickaRadnja.Data.Model
             IdVrstaPlacanja = idVrstaPlacanja;
             IdZaposleni = idZaposleni;
             Svrha = svrha;
-            Datum = datum;
+            DatumVrijeme = datum;
             Komentar = komentar;
         }
 
@@ -35,13 +35,13 @@ namespace MuzickaRadnja.Data.Model
                    IdVrstaPlacanja == uplata.IdVrstaPlacanja &&
                    IdZaposleni == uplata.IdZaposleni &&
                    Svrha == uplata.Svrha &&
-                   Datum == uplata.Datum &&
+                   DatumVrijeme == uplata.DatumVrijeme &&
                    Komentar == uplata.Komentar;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id, IdUgovor, IdVrstaPlacanja, IdZaposleni, Svrha, Datum, Komentar);
+            return HashCode.Combine(Id, IdUgovor, IdVrstaPlacanja, IdZaposleni, Svrha, DatumVrijeme, Komentar);
         }
 
         public override string ToString()

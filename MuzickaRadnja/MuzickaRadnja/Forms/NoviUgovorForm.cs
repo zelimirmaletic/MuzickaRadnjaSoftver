@@ -104,7 +104,8 @@ namespace MuzickaRadnja.Forms
             //Sacuvaj podatke o artiklima na ugovoru
             for (int i = 0; i < dgvTabela.Rows.Count - 1; i++)
             {
-                var stavka = new UgovorImaInstrumentIznajmljivanje(0,idUgovor, klijent, 1);
+                int IdInstrument = Int32.Parse(dgvTabela.Rows[i].Cells[0].Value.ToString());
+                var stavka = new UgovorImaInstrumentIznajmljivanje(0,idUgovor, IdInstrument, 1);
                 UgovorImaInstrumentIznajmljivanjeController.Insert(stavka);
             }
 
