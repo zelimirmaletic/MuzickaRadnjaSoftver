@@ -199,11 +199,12 @@ create table Ugovor(
 )ENGINE = InnoDB;
 
 create table Ugovor_ima_InstrumentIznajmljivanje(
+	Id int unsigned auto_increment ,
     IdUgovor int unsigned,
     IdInstrument int unsigned,
     Kolicina int unsigned,
     -- KEYS
-    primary key (IdUgovor, IdInstrument),
+    primary key (Id,IdUgovor, IdInstrument),
     foreign key (IdUgovor)
         references Ugovor(Id)
         on update cascade on delete restrict ,
@@ -218,8 +219,7 @@ create table Ugovor_uplata(
     IdVrstaPlacanja int unsigned not null ,
     IdZaposleni int unsigned not null ,
     Svrha varchar(100),
-    Datum date,
-    Vrijeme time,
+    DatumVrijeme datetime,
     Komentar text(150),
     -- KEYS
     primary key (Id),
@@ -265,6 +265,15 @@ BEGIN
 END$$    
 DELIMITER ;
 
+DELIMITER $$
+CREATE TRIGGER azuriraj_kolicinu_iznajmljivanje_artikla
+    AFTER INSERT
+    ON `ugovor_ima_instrumentiznajmljivanje` FOR EACH ROW
+BEGIN
+	    update instrumentiznajmljivanje I set I.DostupnaKolicina=I.DostupnaKolicina-new.Kolicina where new.IdInstrument=I.Id;
+END$$    
+DELIMITER ;
+
 -- STORED PROCEDURES
 DELIMITER $$
 CREATE PROCEDURE `GET_STATISTIKA` (IN PDV DOUBLE)
@@ -273,7 +282,7 @@ BEGIN
     select sum(DostupnaKolicina) from instrumentprodaja union all 
     select count(Id) from racun union all 
     select count(Id) from ugovor union all 
-    select sum(I.MaloprodajnaCijena*T.Kolicina+(I.MaloprodajnaCijena*T.Kolicina*PDV)) from racun_ima_instrumentprodaja T inner join instrumentprodaja I on I.Id=T.IdInstrument union all 
+    select sum(((I.MaloprodajnaCijena-I.MaloprodajnaCijena*R.Popust)*convert(T.Kolicina , double)+((I.MaloprodajnaCijena-I.MaloprodajnaCijena*R.Popust)*convert(T.Kolicina , double)*0.17))) as `Ukupno` from racun_ima_instrumentprodaja T inner join instrumentprodaja I on I.Id=T.IdInstrument inner join Racun R on R.Id=T.IdRacun  union all 
     select count(Id) from klijent;
 END$$    
 DELIMITER ;
@@ -288,7 +297,7 @@ create view VIEW_LISTA_STAVKI as
 select R.IdRacun as `Sifra racuna`, R.IdInstrument as `Sifra artikla`,I.Naziv,I.Vrsta,IP.MaloprodajnaCijena, IP.MaloprodajnaCijena+IP.MaloprodajnaCijena*0.17 as `Cijena sa PDV`, R.Kolicina, R.Kolicina*(IP.MaloprodajnaCijena+IP.MaloprodajnaCijena*0.17) as `Ukupno sa PDV`
 from racun_ima_instrumentprodaja R
 inner join `instrumentprodaja` IP on IP.Id=R.IdInstrument
-inner join `instrument` I on I.Id=R.IdInstrument
+inner join `instrument` I on I.Id=R.IdInstrument;
 
 create view VIEW_LISTA_UGOVORA as
 select UG.IdUgovor,concat(O.Ime," ",O.Prezime) as `Klijent`,U.DatumSklapanja,concat(Z.Ime," ",Z.Prezime) as `Zaposleni`,

@@ -37,11 +37,11 @@ insert into Administrator (Id, KorisnickoIme, Lozinka, PoslednjePrijavljivanje)
 
 -- Instrument
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Violina Strad Student', 'žičani', '2011-12-18 13:17:17', 3500.00);
+    values ('Violina Strad Student', 'gudački', '2011-12-18 13:17:17', 3500.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Violina Strad Pro', 'žičani', '2011-12-18 13:17:17', 7000.00);
+    values ('Violina Strad Pro', 'gudački', '2011-12-18 13:17:17', 7000.00);
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
-    values ('Violina Strad Virtuoso', 'žičani', '2011-12-18 13:17:17', 20000.00);
+    values ('Violina Strad Virtuoso', 'gudački', '2011-12-18 13:17:17', 20000.00);
 
 insert into Instrument (Naziv, Vrsta, GodinaProizvodnje, NabavnaCijena )
     values ('Stanway and Sons Grand Piano', 'kombinovani', '2011-12-18 13:17:17', 120000.00);
@@ -130,12 +130,12 @@ insert into Racun_ima_InstrumentProdaja (IdRacun, IdInstrument, Kolicina)
 -- Ugovor
 insert into Ugovor (IdKlijent, IdZaposeni, DatumSklapanja, PlacanjeNaRate, PeriodIznajmljivanja, Otplaceno, Potpisan, Opis, BrojRata, ProduzavanjeUgovora)
 values(3, 1, '2020-05-05', 1, 10, 0, 0, 'Iznajmljivanje klavira.',10,0);
-insert into Ugovor_ima_InstrumentIznajmljivanje (IdUgovor, IdInstrument, Kolicina)
-values (1, 2, 1);
+insert into Ugovor_ima_InstrumentIznajmljivanje (Id,IdUgovor, IdInstrument, Kolicina)
+values (1,1, 2, 1);
 
 -- Ugovor uplata
-insert into Ugovor_uplata (IdUgovor, IdVrstaPlacanja, IdZaposleni, Svrha, Datum, Vrijeme, Komentar)
-values (1, 1, 2, 'Rata za iznajmljivanje', '2020-05-05','12:45' ,'Bez popusta');
+insert into Ugovor_uplata (IdUgovor, IdVrstaPlacanja, IdZaposleni, Svrha, DatumVrijeme, Komentar)
+values (1, 1, 2, 'Rata za iznajmljivanje', '2020-05-05' ,'Bez popusta');
 
 
 

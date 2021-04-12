@@ -76,9 +76,9 @@ namespace MuzickaRadnja.Forms
             this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
             this.lblNaslov.Location = new System.Drawing.Point(56, 0);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(210, 45);
+            this.lblNaslov.Size = new System.Drawing.Size(231, 45);
             this.lblNaslov.TabIndex = 4;
-            this.lblNaslov.Text = "Lista ugovora";
+            this.lblNaslov.Text = "Листа уговора";
             // 
             // pictureBox1
             // 
@@ -107,48 +107,48 @@ namespace MuzickaRadnja.Forms
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Sifra ugovora";
+            this.Column1.HeaderText = "Шифра уговора";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Klijent";
+            this.Column2.HeaderText = "Клијент";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Datum sklapanja";
+            this.Column3.HeaderText = "Датум закључивања";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Zaposleni";
+            this.Column4.HeaderText = "Запослени";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Period iznajmljivanja";
+            this.Column5.HeaderText = "Период изнајмљивања";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Otplaćen?";
+            this.Column6.HeaderText = "Отплаћен?";
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Broj preostalih rata";
+            this.Column7.HeaderText = "Број преосталих рата";
             this.Column7.Name = "Column7";
             // 
             // ListaUgovoraForm

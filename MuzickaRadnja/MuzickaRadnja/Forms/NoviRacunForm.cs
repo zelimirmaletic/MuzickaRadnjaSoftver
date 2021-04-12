@@ -2,13 +2,6 @@
 using MuzickaRadnja.Data.DataAccess;
 using MuzickaRadnja.Data.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MuzickaRadnja.Forms
@@ -23,7 +16,6 @@ namespace MuzickaRadnja.Forms
             tbDatumIzdavanja.Text = DateTime.Now.ToString();
             var zaposleni = OsobaController.Read(Main.IdZaposleni);
             tbZaposleni.Text = zaposleni.Ime + " " + zaposleni.Prezime;
-
             ucitajListuInstrumenata();
 
         }
@@ -107,21 +99,23 @@ namespace MuzickaRadnja.Forms
                 drvr.Cells[2].Value = tbVrsta.Text;
                 drvr.Cells[3].Value = tbGodinaProizvodnje.Text;
                 double cijena = double.Parse(tbProdajnaCijena.Text);
+                double cijenaSaPopustom = cijena - cijena * (Double.Parse(tbPopust.Text)/100);
                 drvr.Cells[4].Value = cijena.ToString("0.00");
-                drvr.Cells[5].Value = ((cijena*Main.PDV)+cijena).ToString("0.00");
-                drvr.Cells[6].Value = tbKolicinaProdaja.Text;
+                drvr.Cells[5].Value = cijenaSaPopustom.ToString("0.00");
+                drvr.Cells[6].Value = ((cijenaSaPopustom*Main.PDV)+cijenaSaPopustom).ToString("0.00");
+                drvr.Cells[7].Value = tbKolicinaProdaja.Text;
                 double kolicina = Double.Parse(tbKolicinaProdaja.Text);
-                drvr.Cells[7].Value = (((cijena * Main.PDV) + cijena) * kolicina).ToString("0.00");
+                drvr.Cells[8].Value = (((cijenaSaPopustom * Main.PDV) + cijenaSaPopustom) * kolicina).ToString("0.00");
                 dgvTabela.Rows.Add(drvr);
                 //Azuriraj labelu ukupno
-                azurirajUkupanIznos((((cijena * Main.PDV) + cijena) * kolicina));
+                azurirajUkupanIznos((((cijenaSaPopustom * Main.PDV) + cijenaSaPopustom) * kolicina));
                 ocistiUnos();
             }
         }
 
         private void azurirajUkupanIznos(double iznos)
         {
-            tbUkupno.Text = ((Double.Parse(tbUkupno.Text) + iznos)- (Double.Parse(tbUkupno.Text) + iznos)*(Double.Parse(tbPopust.Text)/100)).ToString("0.00");
+            tbUkupno.Text = (Double.Parse(tbUkupno.Text) + iznos).ToString("0.00");
         }
 
         private void btnIzbrisiRed_Click(object sender, EventArgs e)
@@ -152,7 +146,7 @@ namespace MuzickaRadnja.Forms
             for(int i=0;i<dgvTabela.Rows.Count-1;i++)
             {
                 int idArtikal = Int32.Parse(dgvTabela.Rows[i].Cells[0].Value.ToString());
-                int kolicina = Int32.Parse(dgvTabela.Rows[i].Cells[6].Value.ToString());
+                int kolicina = Int32.Parse(dgvTabela.Rows[i].Cells[7].Value.ToString());
                 var stavka = new Racun_ima_InstrumentProdaja(idRacun, idArtikal, kolicina);
                 RacunImaInstrumentProdajaController.Insert(stavka);
             }
