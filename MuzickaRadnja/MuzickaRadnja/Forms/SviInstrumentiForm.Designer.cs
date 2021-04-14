@@ -30,7 +30,7 @@ namespace MuzickaRadnja.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SviInstrumentiForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NaslovPanel = new System.Windows.Forms.Panel();
             this.lblNaslov = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,9 +63,9 @@ namespace MuzickaRadnja.Forms
             this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
             this.lblNaslov.Location = new System.Drawing.Point(56, 0);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(343, 45);
+            this.lblNaslov.Size = new System.Drawing.Size(390, 45);
             this.lblNaslov.TabIndex = 4;
-            this.lblNaslov.Text = "Lista svih instrumenata";
+            this.lblNaslov.Text = "Листа свих инструмената";
             // 
             // pictureBox1
             // 
@@ -82,8 +82,8 @@ namespace MuzickaRadnja.Forms
             // 
             // dgvTabela
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTabela.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTabela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -105,35 +105,35 @@ namespace MuzickaRadnja.Forms
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Sifra artikla";
+            this.Column1.HeaderText = "Шифра артикла";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Naziv";
+            this.Column2.HeaderText = "Назив";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Vrsta";
+            this.Column3.HeaderText = "Врста";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Godina proizvodnje";
+            this.Column4.HeaderText = "Година производње";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Nabavna cijena";
+            this.Column5.HeaderText = "Набавна цијена";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
@@ -148,7 +148,7 @@ namespace MuzickaRadnja.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SviInstrumentiForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista svih instrumenata";
+            this.Text = "Листа свих инструмената";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.NaslovPanel.ResumeLayout(false);
             this.NaslovPanel.PerformLayout();

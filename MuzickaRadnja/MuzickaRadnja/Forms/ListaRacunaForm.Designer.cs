@@ -83,42 +83,42 @@ namespace MuzickaRadnja.Forms
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Sifra računa";
+            this.Column1.HeaderText = "Шифра рачуна";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Datum i vrijeme izdavanja";
+            this.Column2.HeaderText = "Датум и вријеме издавања";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Vrsta plaćanja";
+            this.Column3.HeaderText = "Врста плаћања";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Popust";
+            this.Column4.HeaderText = "Попуст";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Zaposleni";
+            this.Column5.HeaderText = "Запослени";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Ukupan iznos";
+            this.Column6.HeaderText = "Укупан износ";
             this.Column6.Name = "Column6";
             // 
             // lblNaslov
@@ -128,9 +128,9 @@ namespace MuzickaRadnja.Forms
             this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
             this.lblNaslov.Location = new System.Drawing.Point(56, 0);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(290, 45);
+            this.lblNaslov.Size = new System.Drawing.Size(449, 45);
             this.lblNaslov.TabIndex = 4;
-            this.lblNaslov.Text = "Lista izdatih računa";
+            this.lblNaslov.Text = "Листа малопродајних рачуна";
             // 
             // pictureBox1
             // 
@@ -165,11 +165,11 @@ namespace MuzickaRadnja.Forms
             this.btnStampaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStampaj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStampaj.ForeColor = System.Drawing.Color.White;
-            this.btnStampaj.Location = new System.Drawing.Point(1006, 54);
+            this.btnStampaj.Location = new System.Drawing.Point(997, 54);
             this.btnStampaj.Name = "btnStampaj";
-            this.btnStampaj.Size = new System.Drawing.Size(82, 30);
+            this.btnStampaj.Size = new System.Drawing.Size(91, 30);
             this.btnStampaj.TabIndex = 34;
-            this.btnStampaj.Text = "Detaljno";
+            this.btnStampaj.Text = "Детаљно";
             this.btnStampaj.UseVisualStyleBackColor = false;
             this.btnStampaj.Click += new System.EventHandler(this.btnStampaj_Click);
             // 
@@ -199,54 +199,54 @@ namespace MuzickaRadnja.Forms
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Sifra računa";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Шифра рачуна";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Šifra artikla";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Шифра артикла";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Naziv";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Назив";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Vrsta";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Врста";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Maloprodajna cijena";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Малопродајна цијена";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Cijena sa PDV";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Цијена са ПДВ";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Količina";
+            this.Column7.HeaderText = "Количина";
             this.Column7.Name = "Column7";
             // 
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.HeaderText = "Ukupno sa PDV";
+            this.Column8.HeaderText = "Укупно са ПДВ";
             this.Column8.Name = "Column8";
             // 
             // label1
@@ -257,9 +257,9 @@ namespace MuzickaRadnja.Forms
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(0, 482);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
+            this.label1.Size = new System.Drawing.Size(163, 25);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Stavke na računu";
+            this.label1.Text = "Ставке на рачуну";
             // 
             // ListaRacunaForm
             // 
@@ -276,7 +276,7 @@ namespace MuzickaRadnja.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListaRacunaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista maloprodajnih računa";
+            this.Text = "Листа малопродајних рачуна";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -294,14 +294,15 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.Label lblNaslov;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel NaslovPanel;
+        private System.Windows.Forms.Button btnStampaj;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button btnStampaj;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -310,6 +311,5 @@ namespace MuzickaRadnja.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Label label1;
     }
 }

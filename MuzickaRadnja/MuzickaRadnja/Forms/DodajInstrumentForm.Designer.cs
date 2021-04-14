@@ -62,9 +62,9 @@ namespace MuzickaRadnja.Forms
             this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
             this.lblNaslov.Location = new System.Drawing.Point(56, 0);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(249, 45);
+            this.lblNaslov.Size = new System.Drawing.Size(276, 45);
             this.lblNaslov.TabIndex = 4;
-            this.lblNaslov.Text = "Novi instrument";
+            this.lblNaslov.Text = "Нови инструмент";
             // 
             // pictureBox1
             // 
@@ -97,9 +97,9 @@ namespace MuzickaRadnja.Forms
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(8, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 21);
+            this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Šifra";
+            this.label1.Text = "Шифра";
             // 
             // label2
             // 
@@ -108,9 +108,9 @@ namespace MuzickaRadnja.Forms
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label2.Location = new System.Drawing.Point(8, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 21);
+            this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Naziv";
+            this.label2.Text = "Назив";
             // 
             // label3
             // 
@@ -119,9 +119,9 @@ namespace MuzickaRadnja.Forms
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label3.Location = new System.Drawing.Point(8, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.Size = new System.Drawing.Size(50, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Vrsta";
+            this.label3.Text = "Врста";
             // 
             // label4
             // 
@@ -130,9 +130,9 @@ namespace MuzickaRadnja.Forms
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label4.Location = new System.Drawing.Point(12, 184);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 21);
+            this.label4.Size = new System.Drawing.Size(149, 21);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Datum proizvodnje";
+            this.label4.Text = "Датум производње";
             // 
             // label5
             // 
@@ -141,9 +141,9 @@ namespace MuzickaRadnja.Forms
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label5.Location = new System.Drawing.Point(12, 221);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 21);
+            this.label5.Size = new System.Drawing.Size(123, 21);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Nabavna cijena";
+            this.label5.Text = "Набавна цијена";
             // 
             // label6
             // 
@@ -152,13 +152,13 @@ namespace MuzickaRadnja.Forms
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label6.Location = new System.Drawing.Point(12, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 21);
+            this.label6.Size = new System.Drawing.Size(65, 21);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Promet";
+            this.label6.Text = "Промет";
             // 
             // tbSifra
             // 
-            this.tbSifra.Location = new System.Drawing.Point(63, 74);
+            this.tbSifra.Location = new System.Drawing.Point(76, 74);
             this.tbSifra.Name = "tbSifra";
             this.tbSifra.ReadOnly = true;
             this.tbSifra.Size = new System.Drawing.Size(72, 23);
@@ -166,9 +166,9 @@ namespace MuzickaRadnja.Forms
             // 
             // tbNaziv
             // 
-            this.tbNaziv.Location = new System.Drawing.Point(63, 109);
+            this.tbNaziv.Location = new System.Drawing.Point(76, 109);
             this.tbNaziv.Name = "tbNaziv";
-            this.tbNaziv.Size = new System.Drawing.Size(359, 23);
+            this.tbNaziv.Size = new System.Drawing.Size(346, 23);
             this.tbNaziv.TabIndex = 14;
             // 
             // tbNabavnaCijena
@@ -198,9 +198,9 @@ namespace MuzickaRadnja.Forms
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label7.Location = new System.Drawing.Point(12, 352);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 21);
+            this.label7.Size = new System.Drawing.Size(80, 21);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Količina";
+            this.label7.Text = "Количина";
             // 
             // lblCijena
             // 
@@ -209,9 +209,9 @@ namespace MuzickaRadnja.Forms
             this.lblCijena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.lblCijena.Location = new System.Drawing.Point(12, 312);
             this.lblCijena.Name = "lblCijena";
-            this.lblCijena.Size = new System.Drawing.Size(116, 21);
+            this.lblCijena.Size = new System.Drawing.Size(129, 21);
             this.lblCijena.TabIndex = 20;
-            this.lblCijena.Text = "Prodajna cijena";
+            this.lblCijena.Text = "Продајна цијена";
             // 
             // tbProdajnaCijena
             // 
@@ -239,7 +239,7 @@ namespace MuzickaRadnja.Forms
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 30);
             this.button1.TabIndex = 23;
-            this.button1.Text = "Sačuvaj";
+            this.button1.Text = "Сачувај";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -255,7 +255,7 @@ namespace MuzickaRadnja.Forms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 30);
             this.button2.TabIndex = 24;
-            this.button2.Text = "Otkaži";
+            this.button2.Text = "Откажи";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -310,7 +310,7 @@ namespace MuzickaRadnja.Forms
             this.MinimizeBox = false;
             this.Name = "DodajInstrumentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Promet";
+            this.Text = "Нови инструмент";
             this.Load += new System.EventHandler(this.DodajInstrumentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.NaslovPanel.ResumeLayout(false);

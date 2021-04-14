@@ -29,12 +29,9 @@ namespace MuzickaRadnja.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaUgovoraForm));
             this.dgvTabela = new System.Windows.Forms.DataGridView();
-            this.lblNaslov = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NaslovPanel = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,9 @@ namespace MuzickaRadnja.Forms
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNaslov = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.NaslovPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.NaslovPanel.SuspendLayout();
@@ -49,8 +49,8 @@ namespace MuzickaRadnja.Forms
             // 
             // dgvTabela
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTabela.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTabela.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -68,41 +68,6 @@ namespace MuzickaRadnja.Forms
             this.dgvTabela.RowTemplate.Height = 25;
             this.dgvTabela.Size = new System.Drawing.Size(1088, 682);
             this.dgvTabela.TabIndex = 35;
-            // 
-            // lblNaslov
-            // 
-            this.lblNaslov.AutoSize = true;
-            this.lblNaslov.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
-            this.lblNaslov.Location = new System.Drawing.Point(56, 0);
-            this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(231, 45);
-            this.lblNaslov.TabIndex = 4;
-            this.lblNaslov.Text = "Листа уговора";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // NaslovPanel
-            // 
-            this.NaslovPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
-            this.NaslovPanel.Controls.Add(this.lblNaslov);
-            this.NaslovPanel.Controls.Add(this.pictureBox1);
-            this.NaslovPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NaslovPanel.Location = new System.Drawing.Point(0, 0);
-            this.NaslovPanel.Name = "NaslovPanel";
-            this.NaslovPanel.Size = new System.Drawing.Size(1096, 50);
-            this.NaslovPanel.TabIndex = 34;
             // 
             // Column1
             // 
@@ -151,6 +116,41 @@ namespace MuzickaRadnja.Forms
             this.Column7.HeaderText = "Број преосталих рата";
             this.Column7.Name = "Column7";
             // 
+            // lblNaslov
+            // 
+            this.lblNaslov.AutoSize = true;
+            this.lblNaslov.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
+            this.lblNaslov.Location = new System.Drawing.Point(56, 0);
+            this.lblNaslov.Name = "lblNaslov";
+            this.lblNaslov.Size = new System.Drawing.Size(231, 45);
+            this.lblNaslov.TabIndex = 4;
+            this.lblNaslov.Text = "Листа уговора";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // NaslovPanel
+            // 
+            this.NaslovPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
+            this.NaslovPanel.Controls.Add(this.lblNaslov);
+            this.NaslovPanel.Controls.Add(this.pictureBox1);
+            this.NaslovPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NaslovPanel.Location = new System.Drawing.Point(0, 0);
+            this.NaslovPanel.Name = "NaslovPanel";
+            this.NaslovPanel.Size = new System.Drawing.Size(1096, 50);
+            this.NaslovPanel.TabIndex = 34;
+            // 
             // ListaUgovoraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -161,7 +161,7 @@ namespace MuzickaRadnja.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListaUgovoraForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista ugovora";
+            this.Text = "Листа уговора";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvTabela)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

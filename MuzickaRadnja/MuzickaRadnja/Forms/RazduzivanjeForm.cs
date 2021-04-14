@@ -56,7 +56,7 @@ namespace MuzickaRadnja.Forms
             else
             {
                 idUgovor = Int32.Parse(dgvTabela.SelectedRows[0].Cells[0].Value.ToString());
-                idKlijent = Int32.Parse(dgvTabela.SelectedRows[0].Cells[]); 
+                //idKlijent = Int32.Parse(dgvTabela.SelectedRows[0].Cells[]); 
 
 
 

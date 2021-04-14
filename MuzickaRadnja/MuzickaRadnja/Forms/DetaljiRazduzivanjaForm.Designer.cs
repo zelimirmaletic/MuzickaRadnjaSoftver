@@ -60,9 +60,9 @@ namespace MuzickaRadnja.Forms
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label2.Location = new System.Drawing.Point(6, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 21);
+            this.label2.Size = new System.Drawing.Size(158, 21);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Datum razduživanja";
+            this.label2.Text = "Датум раздуживања";
             // 
             // NaslovPanel
             // 
@@ -82,9 +82,9 @@ namespace MuzickaRadnja.Forms
             this.lblNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(0)))), ((int)(((byte)(217)))));
             this.lblNaslov.Location = new System.Drawing.Point(56, 0);
             this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(292, 45);
+            this.lblNaslov.Size = new System.Drawing.Size(341, 45);
             this.lblNaslov.TabIndex = 4;
-            this.lblNaslov.Text = "Detalji razduživanja";
+            this.lblNaslov.Text = "Детаљи раздуживања";
             // 
             // pictureBox1
             // 
@@ -106,9 +106,9 @@ namespace MuzickaRadnja.Forms
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(6, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Oštećenja";
+            this.label1.Text = "Оштећења";
             // 
             // tbOstecenja
             // 
@@ -125,9 +125,9 @@ namespace MuzickaRadnja.Forms
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(24)))), ((int)(((byte)(51)))));
             this.label3.Location = new System.Drawing.Point(6, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 21);
+            this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Naknada";
+            this.label3.Text = "Накнада";
             // 
             // tbNaknada
             // 
@@ -148,7 +148,7 @@ namespace MuzickaRadnja.Forms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 30);
             this.button2.TabIndex = 26;
-            this.button2.Text = "Otkaži";
+            this.button2.Text = "Откажи";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -164,8 +164,9 @@ namespace MuzickaRadnja.Forms
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 30);
             this.button1.TabIndex = 25;
-            this.button1.Text = "Sačuvaj";
+            this.button1.Text = "Сачувај";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DetaljiRazduzivanjaForm
             // 
@@ -184,7 +185,7 @@ namespace MuzickaRadnja.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DetaljiRazduzivanjaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Razduživanje";
+            this.Text = "Раздуживање";
             this.NaslovPanel.ResumeLayout(false);
             this.NaslovPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
