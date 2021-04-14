@@ -9,7 +9,7 @@ insert into Mjesto (Naziv, Oznaka) values ('Istočno Sarajevo','70000');
 
 -- Osoba
 insert into Osoba(IdMjesto, Ime, Prezime, JMB, BrojTelefona, Email, DatumRodjenja, Pol)
- values ((select Id from Mjesto where Naziv = 'Banja Luka'), 'Jovan', 'Marić', '4587652154876','063254789','joca@mail.com',CURRENT_DATE(),'muški');
+ values ((select Id from Mjesto where Naziv = 'Banja Luka'), 'Jovan', 'Perić', '4587652154876','063254789','joca@mail.com',CURRENT_DATE(),'muški');
 insert into Osoba(IdMjesto, Ime, Prezime, JMB, BrojTelefona, Email, DatumRodjenja, Pol)
  values ((select Id from Mjesto where Naziv = 'Laktaši'), 'Mirko', 'Malinić', '8546325789521','066365874','mirko@mail.com',CURRENT_DATE(),'muški');
 insert into Osoba(IdMjesto, Ime, Prezime, JMB, BrojTelefona, Email, DatumRodjenja, Pol)
